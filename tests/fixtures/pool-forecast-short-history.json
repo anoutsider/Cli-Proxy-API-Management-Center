@@ -1,0 +1,460 @@
+{
+  "generatedAt": "2026-11-07T20:17:33Z",
+  "threshold": 0.9,
+  "drainWindowHours": 24,
+  "historyDays": 3,
+  "accounts": [
+    {
+      "id": "claude-ana@example.com.json",
+      "email": "ana@example.com",
+      "state": "next",
+      "sevenDay": {
+        "used": 0.55,
+        "resetsAt": "2026-11-08T05:17:00Z",
+        "observedAt": "2026-11-07T20:15:33Z"
+      },
+      "models": [
+        {
+          "name": "Fable",
+          "used": 0.33,
+          "resetsAt": "2026-11-08T05:17:00Z"
+        }
+      ],
+      "leftAtReset": null
+    },
+    {
+      "id": "claude-ben@example.com.json",
+      "email": "ben@example.com",
+      "state": "draining",
+      "sevenDay": {
+        "used": 0.96,
+        "resetsAt": "2026-11-08T14:17:00Z",
+        "observedAt": "2026-11-07T20:15:33Z"
+      },
+      "models": [
+        {
+          "name": "Fable",
+          "used": 0.48,
+          "resetsAt": "2026-11-08T14:17:00Z"
+        }
+      ],
+      "leftAtReset": null
+    },
+    {
+      "id": "claude-cal@example.com.json",
+      "email": "cal@example.com",
+      "state": "eligible",
+      "sevenDay": {
+        "used": 0.38,
+        "resetsAt": "2026-11-11T00:17:00Z",
+        "observedAt": "2026-11-07T20:15:33Z"
+      },
+      "models": [
+        {
+          "name": "Fable",
+          "used": 0.266,
+          "resetsAt": "2026-11-11T00:17:00Z"
+        }
+      ],
+      "leftAtReset": null
+    },
+    {
+      "id": "claude-dee@example.com.json",
+      "email": "dee@example.com",
+      "state": "at-limit",
+      "sevenDay": {
+        "used": 0.93,
+        "resetsAt": "2026-11-12T06:17:00Z",
+        "observedAt": "2026-11-07T20:15:33Z"
+      },
+      "models": [
+        {
+          "name": "Fable",
+          "used": 0.372,
+          "resetsAt": "2026-11-12T06:17:00Z"
+        }
+      ],
+      "leftAtReset": null
+    },
+    {
+      "id": "claude-eli@example.com.json",
+      "email": "eli@example.com",
+      "state": "needs-sign-in",
+      "sevenDay": {
+        "used": 0.3,
+        "resetsAt": "2026-11-09T20:17:00Z",
+        "observedAt": "2026-11-07T20:15:33Z"
+      },
+      "models": [
+        {
+          "name": "Fable",
+          "used": 0.15,
+          "resetsAt": "2026-11-09T20:17:00Z"
+        }
+      ],
+      "leftAtReset": null
+    },
+    {
+      "id": "claude-fay@example.com.json",
+      "email": "fay@example.com",
+      "state": "no-data",
+      "sevenDay": null,
+      "models": [],
+      "leftAtReset": null
+    },
+    {
+      "id": "claude-gus@example.com.json",
+      "email": "gus@example.com",
+      "state": "disabled",
+      "sevenDay": {
+        "used": 0.2,
+        "resetsAt": "2026-11-12T20:17:00Z",
+        "observedAt": "2026-11-07T20:15:33Z"
+      },
+      "models": [
+        {
+          "name": "Fable",
+          "used": 0.1,
+          "resetsAt": "2026-11-12T20:17:00Z"
+        }
+      ],
+      "leftAtReset": null
+    }
+  ],
+  "pool": {
+    "accounts": 4,
+    "remaining": 1.18,
+    "fableRemaining": 2.552,
+    "burnPerDay": {
+      "quiet": null,
+      "typical": null,
+      "busy": null,
+      "last24h": 0.8407
+    },
+    "runsOutAt": {
+      "quiet": null,
+      "typical": null,
+      "busy": null
+    },
+    "nextReset": {
+      "email": "ana@example.com",
+      "at": "2026-11-08T05:17:00Z",
+      "restores": 0.55
+    }
+  },
+  "history": [
+    {
+      "at": "2026-11-05T09:00:00Z",
+      "remaining": 3.7989,
+      "fableRemaining": 4.3434
+    },
+    {
+      "at": "2026-11-05T10:00:00Z",
+      "remaining": 3.7712,
+      "fableRemaining": 4.3297
+    },
+    {
+      "at": "2026-11-05T11:00:00Z",
+      "remaining": 3.7434,
+      "fableRemaining": 4.3161
+    },
+    {
+      "at": "2026-11-05T12:00:00Z",
+      "remaining": 3.7156,
+      "fableRemaining": 4.3025
+    },
+    {
+      "at": "2026-11-05T13:00:00Z",
+      "remaining": 3.6879,
+      "fableRemaining": 4.2889
+    },
+    {
+      "at": "2026-11-05T14:00:00Z",
+      "remaining": 3.6601,
+      "fableRemaining": 4.2753
+    },
+    {
+      "at": "2026-11-05T15:00:00Z",
+      "remaining": 3.6323,
+      "fableRemaining": 4.2616
+    },
+    {
+      "at": "2026-11-05T16:00:00Z",
+      "remaining": 3.6045,
+      "fableRemaining": 4.248
+    },
+    {
+      "at": "2026-11-05T17:00:00Z",
+      "remaining": 3.5768,
+      "fableRemaining": 4.2344
+    },
+    {
+      "at": "2026-11-05T18:00:00Z",
+      "remaining": 3.549,
+      "fableRemaining": 4.2208
+    },
+    {
+      "at": "2026-11-05T19:00:00Z",
+      "remaining": 3.5212,
+      "fableRemaining": 4.2071
+    },
+    {
+      "at": "2026-11-05T20:00:00Z",
+      "remaining": 3.4935,
+      "fableRemaining": 4.1935
+    },
+    {
+      "at": "2026-11-05T21:00:00Z",
+      "remaining": 3.4657,
+      "fableRemaining": 4.1799
+    },
+    {
+      "at": "2026-11-05T22:00:00Z",
+      "remaining": 3.4379,
+      "fableRemaining": 4.1663
+    },
+    {
+      "at": "2026-11-05T23:00:00Z",
+      "remaining": 3.4102,
+      "fableRemaining": 4.1526
+    },
+    {
+      "at": "2026-11-06T00:00:00Z",
+      "remaining": 3.3824,
+      "fableRemaining": 4.139
+    },
+    {
+      "at": "2026-11-06T01:00:00Z",
+      "remaining": 3.3531,
+      "fableRemaining": 4.1247
+    },
+    {
+      "at": "2026-11-06T02:00:00Z",
+      "remaining": 3.3239,
+      "fableRemaining": 4.1103
+    },
+    {
+      "at": "2026-11-06T03:00:00Z",
+      "remaining": 3.2947,
+      "fableRemaining": 4.096
+    },
+    {
+      "at": "2026-11-06T04:00:00Z",
+      "remaining": 3.2655,
+      "fableRemaining": 4.0817
+    },
+    {
+      "at": "2026-11-06T05:00:00Z",
+      "remaining": 3.2362,
+      "fableRemaining": 4.0673
+    },
+    {
+      "at": "2026-11-06T06:00:00Z",
+      "remaining": 3.207,
+      "fableRemaining": 4.053
+    },
+    {
+      "at": "2026-11-06T07:00:00Z",
+      "remaining": 3.1778,
+      "fableRemaining": 4.0386
+    },
+    {
+      "at": "2026-11-06T08:00:00Z",
+      "remaining": 3.1485,
+      "fableRemaining": 4.0243
+    },
+    {
+      "at": "2026-11-06T09:00:00Z",
+      "remaining": 3.1193,
+      "fableRemaining": 4.01
+    },
+    {
+      "at": "2026-11-06T10:00:00Z",
+      "remaining": 3.0901,
+      "fableRemaining": 3.9956
+    },
+    {
+      "at": "2026-11-06T11:00:00Z",
+      "remaining": 3.0608,
+      "fableRemaining": 3.9813
+    },
+    {
+      "at": "2026-11-06T12:00:00Z",
+      "remaining": 3.0316,
+      "fableRemaining": 3.9669
+    },
+    {
+      "at": "2026-11-06T13:00:00Z",
+      "remaining": 3.0024,
+      "fableRemaining": 3.9526
+    },
+    {
+      "at": "2026-11-06T14:00:00Z",
+      "remaining": 2.9731,
+      "fableRemaining": 3.9383
+    },
+    {
+      "at": "2026-11-06T15:00:00Z",
+      "remaining": 2.9439,
+      "fableRemaining": 3.9239
+    },
+    {
+      "at": "2026-11-06T16:00:00Z",
+      "remaining": 2.9147,
+      "fableRemaining": 3.9096
+    },
+    {
+      "at": "2026-11-06T17:00:00Z",
+      "remaining": 2.8854,
+      "fableRemaining": 3.8952
+    },
+    {
+      "at": "2026-11-06T18:00:00Z",
+      "remaining": 2.8562,
+      "fableRemaining": 3.8809
+    },
+    {
+      "at": "2026-11-06T19:00:00Z",
+      "remaining": 2.827,
+      "fableRemaining": 3.8666
+    },
+    {
+      "at": "2026-11-06T20:00:00Z",
+      "remaining": 2.7977,
+      "fableRemaining": 3.8522
+    },
+    {
+      "at": "2026-11-06T21:00:00Z",
+      "remaining": 2.7685,
+      "fableRemaining": 3.8379
+    },
+    {
+      "at": "2026-11-06T22:00:00Z",
+      "remaining": 2.7393,
+      "fableRemaining": 3.8235
+    },
+    {
+      "at": "2026-11-06T23:00:00Z",
+      "remaining": 2.71,
+      "fableRemaining": 3.8092
+    },
+    {
+      "at": "2026-11-07T00:00:00Z",
+      "remaining": 2.6808,
+      "fableRemaining": 3.7949
+    },
+    {
+      "at": "2026-11-07T01:00:00Z",
+      "remaining": 2.6441,
+      "fableRemaining": 3.7769
+    },
+    {
+      "at": "2026-11-07T02:00:00Z",
+      "remaining": 2.608,
+      "fableRemaining": 3.7592
+    },
+    {
+      "at": "2026-11-07T03:00:00Z",
+      "remaining": 2.5719,
+      "fableRemaining": 3.7415
+    },
+    {
+      "at": "2026-11-07T04:00:00Z",
+      "remaining": 2.5358,
+      "fableRemaining": 3.7239
+    },
+    {
+      "at": "2026-11-07T05:00:00Z",
+      "remaining": 2.4997,
+      "fableRemaining": 3.7062
+    },
+    {
+      "at": "2026-11-07T06:00:00Z",
+      "remaining": 2.4636,
+      "fableRemaining": 3.6885
+    },
+    {
+      "at": "2026-11-07T07:00:00Z",
+      "remaining": 1.6599,
+      "fableRemaining": 2.787
+    },
+    {
+      "at": "2026-11-07T08:00:00Z",
+      "remaining": 1.6238,
+      "fableRemaining": 2.7693
+    },
+    {
+      "at": "2026-11-07T09:00:00Z",
+      "remaining": 1.5877,
+      "fableRemaining": 2.7517
+    },
+    {
+      "at": "2026-11-07T10:00:00Z",
+      "remaining": 1.5516,
+      "fableRemaining": 2.734
+    },
+    {
+      "at": "2026-11-07T11:00:00Z",
+      "remaining": 1.5155,
+      "fableRemaining": 2.7163
+    },
+    {
+      "at": "2026-11-07T12:00:00Z",
+      "remaining": 1.4794,
+      "fableRemaining": 2.6986
+    },
+    {
+      "at": "2026-11-07T13:00:00Z",
+      "remaining": 1.4433,
+      "fableRemaining": 2.6809
+    },
+    {
+      "at": "2026-11-07T14:00:00Z",
+      "remaining": 1.4072,
+      "fableRemaining": 2.6633
+    },
+    {
+      "at": "2026-11-07T15:00:00Z",
+      "remaining": 1.3711,
+      "fableRemaining": 2.6456
+    },
+    {
+      "at": "2026-11-07T16:00:00Z",
+      "remaining": 1.335,
+      "fableRemaining": 2.6279
+    },
+    {
+      "at": "2026-11-07T17:00:00Z",
+      "remaining": 1.2989,
+      "fableRemaining": 2.6102
+    },
+    {
+      "at": "2026-11-07T18:00:00Z",
+      "remaining": 1.2628,
+      "fableRemaining": 2.5925
+    },
+    {
+      "at": "2026-11-07T19:00:00Z",
+      "remaining": 1.2267,
+      "fableRemaining": 2.5749
+    },
+    {
+      "at": "2026-11-07T20:00:00Z",
+      "remaining": 1.1906,
+      "fableRemaining": 2.5572
+    }
+  ],
+  "projection": {
+    "quiet": null,
+    "typical": null,
+    "busy": null
+  },
+  "accuracy": null,
+  "alerts": [
+    {
+      "kind": "sign-in",
+      "key": "sign-in:claude-eli@example.com.json:1794010653",
+      "message": "eli@example.com needs signing in on the hub panel. Its login was refused at 00:17 UTC. The other 5 accounts are still serving."
+    }
+  ]
+}

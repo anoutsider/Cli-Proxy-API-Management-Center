@@ -2438,6 +2438,7 @@
     "refresh_failed": "The last refresh failed: {{message}}. The page shows the previous forecast.",
     "not_served": "This hub does not serve the pool forecast.",
     "retry": "Retry",
+    "verdict_no_accounts": "No account can serve: sign in or enable an account.",
     "verdict_no_history": "Not enough history yet: the forecast needs 3 full days.",
     "verdict_enough": "Enough quota for the next 7 days, even on a busy day.",
     "verdict_out_now": "The Claude quota is used up now.",

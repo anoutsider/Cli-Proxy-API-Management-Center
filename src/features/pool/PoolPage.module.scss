@@ -56,6 +56,7 @@
   color: var(--text-primary);
   text-wrap: pretty;
 
+  &[data-verdict='no-accounts'],
   &[data-verdict='runs-out'],
   &[data-verdict='out-now'] {
     padding-left: 12px;

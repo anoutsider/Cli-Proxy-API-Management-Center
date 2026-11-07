@@ -2438,6 +2438,7 @@
     "refresh_failed": "Son yenileme başarısız oldu: {{message}}. Sayfa önceki tahmini gösteriyor.",
     "not_served": "Bu hub havuz tahminini sunmuyor.",
     "retry": "Yeniden dene",
+    "verdict_no_accounts": "Hizmet verebilecek hesap yok: oturum açın veya bir hesabı etkinleştirin.",
     "verdict_no_history": "Henüz yeterli geçmiş yok: tahmin için 3 tam gün gerekir.",
     "verdict_enough": "Yoğun bir günde bile önümüzdeki 7 gün için kota yeterli.",
     "verdict_out_now": "Claude kotası şu anda tükendi.",

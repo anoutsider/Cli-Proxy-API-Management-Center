@@ -1,5 +1,11 @@
 import type { TFunction } from 'i18next';
-import type { PoolAccount, PoolForecast, PoolHistoryPoint, PoolPoint } from '@/types/poolForecast';
+import type {
+  PoolAccount,
+  PoolDayKind,
+  PoolForecast,
+  PoolHistoryPoint,
+  PoolPoint,
+} from '@/types/poolForecast';
 import { formatInstantShort, formatRelativeInstant } from '@/utils/quota/relativeTime';
 import { DAY_MS, HOUR_MS, MINUTE_MS } from '@/utils/time/durations';
 
@@ -7,16 +13,19 @@ export const POOL_REFRESH_MS = 60_000;
 export const STALE_AFTER_MS = 30 * MINUTE_MS;
 export const CHART_SPAN_MS = 7 * DAY_MS;
 
+type VerdictReset = { hours: number; email: string; percent: number };
+
 export type PoolVerdict =
+  | { kind: 'no-accounts' }
   | { kind: 'no-history' }
   | { kind: 'enough' }
-  | { kind: 'out-now' }
+  | { kind: 'out-now'; nextReset: VerdictReset | null }
   | {
       kind: 'runs-out';
       soonHours: number;
       /** Null when a quiet day does not run out within 7 days. */
       lateHours: number | null;
-      nextReset: { hours: number; email: string; percent: number } | null;
+      nextReset: VerdictReset | null;
     };
 
 /** Whole hours left, truncated like the panel countdowns so the verdict never claims extra time. */
@@ -24,42 +33,67 @@ const hoursUntil = (atMs: number, nowMs: number) => Math.floor((atMs - nowMs) / 
 
 export const toPercent = (fraction: number) => Math.round(fraction * 100);
 
-/** One-sentence outlook from the run-out times; the busy day sets the soonest bound. */
+/** Usage percent rounded down, so 100% shows only for an account that is full. */
+export const usedPercent = (fraction: number) => Math.floor(fraction * 100 + 1e-6);
+
+const upcomingReset = (
+  nextReset: PoolForecast['pool']['nextReset'],
+  nowMs: number
+): VerdictReset | null =>
+  nextReset && nextReset.atMs > nowMs
+    ? {
+        hours: Math.max(1, hoursUntil(nextReset.atMs, nowMs)),
+        email: nextReset.email,
+        percent: toPercent(nextReset.restores),
+      }
+    : null;
+
+/**
+ * One-sentence outlook. The current pool comes first: no account in it, then no quota left in it.
+ * Then the run-out times, where the busy day sets the soonest bound.
+ */
 export function buildVerdict(forecast: PoolForecast, nowMs: number): PoolVerdict {
-  const { burnPerDay, runsOutAtMs, nextReset } = forecast.pool;
+  const { accounts, remaining, burnPerDay, runsOutAtMs } = forecast.pool;
+  if (accounts === 0) return { kind: 'no-accounts' };
+  const nextReset = upcomingReset(forecast.pool.nextReset, nowMs);
+  if (remaining <= 0) return { kind: 'out-now', nextReset };
   if (burnPerDay === null || runsOutAtMs === null) return { kind: 'no-history' };
   const times = [runsOutAtMs.busy, runsOutAtMs.typical, runsOutAtMs.quiet].filter(
     (value): value is number => value !== null
   );
   if (times.length === 0) return { kind: 'enough' };
   const soonest = Math.min(...times);
-  if (soonest <= nowMs) return { kind: 'out-now' };
+  if (soonest <= nowMs) return { kind: 'out-now', nextReset };
   const soonHours = Math.max(1, hoursUntil(soonest, nowMs));
   return {
     kind: 'runs-out',
     soonHours,
     lateHours:
       runsOutAtMs.quiet === null ? null : Math.max(1, hoursUntil(Math.max(...times), nowMs)),
-    nextReset:
-      nextReset && nextReset.atMs > nowMs
-        ? {
-            hours: Math.max(1, hoursUntil(nextReset.atMs, nowMs)),
-            email: nextReset.email,
-            percent: toPercent(nextReset.restores),
-          }
-        : null,
+    nextReset,
   };
 }
+
+const withNextReset = (sentence: string, nextReset: VerdictReset | null, t: TFunction) =>
+  nextReset
+    ? `${sentence} ${t('pool.verdict_next_reset', {
+        count: nextReset.hours,
+        email: nextReset.email,
+        percent: nextReset.percent,
+      })}`
+    : sentence;
 
 /** The verdict as one or two sentences in the current language. */
 export function verdictText(verdict: PoolVerdict, t: TFunction): string {
   switch (verdict.kind) {
+    case 'no-accounts':
+      return t('pool.verdict_no_accounts');
     case 'no-history':
       return t('pool.verdict_no_history');
     case 'enough':
       return t('pool.verdict_enough');
     case 'out-now':
-      return t('pool.verdict_out_now');
+      return withNextReset(t('pool.verdict_out_now'), verdict.nextReset, t);
     case 'runs-out': {
       const outlook =
         verdict.lateHours === null
@@ -70,13 +104,7 @@ export function verdictText(verdict: PoolVerdict, t: TFunction): string {
                 soon: verdict.soonHours,
                 late: verdict.lateHours,
               });
-      if (!verdict.nextReset) return outlook;
-      const reset = t('pool.verdict_next_reset', {
-        count: verdict.nextReset.hours,
-        email: verdict.nextReset.email,
-        percent: verdict.nextReset.percent,
-      });
-      return `${outlook} ${reset}`;
+      return withNextReset(outlook, verdict.nextReset, t);
     }
   }
 }
@@ -144,19 +172,32 @@ export type ChartScale = {
   y: (value: number) => number;
 };
 
-export function createChartScale(forecast: PoolForecast): ChartScale {
+/**
+ * Time runs over the 7 days before and after the forecast. The value axis runs from 0 to the pool
+ * size or the largest value drawn, whichever is larger, rounded up to a whole account.
+ */
+export function createChartScale(
+  forecast: PoolForecast,
+  series: ChartSeries,
+  showFable: boolean
+): ChartScale {
   const nowMs = forecast.generatedAtMs;
   const startMs = nowMs - CHART_SPAN_MS;
   const endMs = nowMs + CHART_SPAN_MS;
-  const max = Math.max(1, forecast.pool.accounts);
-  const clamp = (value: number) => Math.min(max, Math.max(0, value));
+  const drawn = [
+    series.history,
+    ...(series.projection ? Object.values(series.projection) : []),
+    ...(showFable ? [series.fable] : []),
+  ];
+  const largest = Math.max(0, ...drawn.flat().map((point) => point.remaining));
+  const max = Math.max(1, forecast.pool.accounts, Math.ceil(largest));
   return {
     startMs,
     endMs,
     nowMs,
     max,
     x: (ms) => ((ms - startMs) / (endMs - startMs)) * CHART_WIDTH,
-    y: (value) => CHART_HEIGHT - (clamp(value) / max) * CHART_HEIGHT,
+    y: (value) => CHART_HEIGHT - (Math.max(0, value) / max) * CHART_HEIGHT,
   };
 }
 
@@ -229,4 +270,68 @@ export function resetMarkers(forecast: PoolForecast, scale: ChartScale): ResetMa
     })
     .filter((marker) => marker.atMs > scale.startMs && marker.atMs <= scale.endMs)
     .sort((a, b) => a.atMs - b.atMs);
+}
+
+/** The whole UTC hour nearest to `ms` inside the chart span; the hub sends points on whole hours. */
+export function snapToHour(ms: number, scale: ChartScale): number {
+  const first = Math.ceil(scale.startMs / HOUR_MS) * HOUR_MS;
+  const last = Math.floor(scale.endMs / HOUR_MS) * HOUR_MS;
+  return Math.min(last, Math.max(first, Math.round(ms / HOUR_MS) * HOUR_MS));
+}
+
+/** The point nearest to `ms` within half an hour; points are in time order. */
+function pointNear(points: PoolPoint[], ms: number): PoolPoint | undefined {
+  let low = 0;
+  let high = points.length - 1;
+  while (low < high) {
+    const mid = (low + high) >> 1;
+    if (points[mid].atMs < ms) low = mid + 1;
+    else high = mid;
+  }
+  const nearest = [points[low - 1], points[low]]
+    .filter(Boolean)
+    .sort((a, b) => Math.abs(a.atMs - ms) - Math.abs(b.atMs - ms))[0];
+  return nearest && Math.abs(nearest.atMs - ms) <= HOUR_MS / 2 ? nearest : undefined;
+}
+
+export type ReadoutKey = 'past' | 'fable' | PoolDayKind;
+
+export type ChartReadout = {
+  /** Time of the points the readout shows. */
+  atMs: number;
+  rows: { key: ReadoutKey; value: number }[];
+};
+
+/** Values at the hour nearest to `ms`: history before now, the three kinds of day after it. */
+export function chartReadout(
+  series: ChartSeries,
+  scale: ChartScale,
+  ms: number,
+  showFable: boolean
+): ChartReadout {
+  const hourMs = snapToHour(ms, scale);
+  const { history, fable, projection } = series;
+  let sources: [ReadoutKey, PoolPoint[]][] = [];
+  if (hourMs <= scale.nowMs) {
+    sources = showFable
+      ? [
+          ['past', history],
+          ['fable', fable],
+        ]
+      : [['past', history]];
+  } else if (projection) {
+    sources = [
+      ['quiet', projection.quiet],
+      ['typical', projection.typical],
+      ['busy', projection.busy],
+    ];
+  }
+  const found = sources.flatMap(([key, points]) => {
+    const point = pointNear(points, hourMs);
+    return point ? [{ key, point }] : [];
+  });
+  return {
+    atMs: found[0]?.point.atMs ?? hourMs,
+    rows: found.map(({ key, point }) => ({ key, value: point.remaining })),
+  };
 }

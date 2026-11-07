@@ -1,19 +1,22 @@
 import { useMemo, useState, type KeyboardEvent, type PointerEvent } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ToggleSwitch } from '@/components/ui/ToggleSwitch';
-import type { PoolForecast, PoolPoint } from '@/types/poolForecast';
+import type { PoolForecast } from '@/types/poolForecast';
 import { DAY_MS, HOUR_MS } from '@/utils/time/durations';
 import {
   CHART_HEIGHT,
   CHART_WIDTH,
   bandPath,
   buildChartSeries,
+  chartReadout,
   createChartScale,
   dayTicks,
   formatDayHour,
   formatDayLabel,
   resetMarkers,
   linePath,
+  snapToHour,
+  type ReadoutKey,
 } from '../logic';
 import styles from './PoolChart.module.scss';
 
@@ -24,20 +27,6 @@ type PoolChartProps = {
   summary: string;
 };
 
-/** Value of the point nearest to `ms` within half an hour; points are in time order. */
-const valueNear = (points: PoolPoint[], ms: number): number | undefined => {
-  let low = 0;
-  let high = points.length - 1;
-  while (low < high) {
-    const mid = (low + high) >> 1;
-    if (points[mid].atMs < ms) low = mid + 1;
-    else high = mid;
-  }
-  const candidates = [points[low - 1], points[low]].filter(Boolean);
-  const nearest = candidates.sort((a, b) => Math.abs(a.atMs - ms) - Math.abs(b.atMs - ms))[0];
-  return nearest && Math.abs(nearest.atMs - ms) <= HOUR_MS / 2 ? nearest.remaining : undefined;
-};
-
 const formatAccounts = (value: number) => value.toFixed(1);
 
 export function PoolChart({ forecast, locale, summary }: PoolChartProps) {
@@ -45,26 +34,22 @@ export function PoolChart({ forecast, locale, summary }: PoolChartProps) {
   const [showFable, setShowFable] = useState(false);
   const [hoverMs, setHoverMs] = useState<number | null>(null);
 
-  const scale = useMemo(() => createChartScale(forecast), [forecast]);
   const series = useMemo(() => buildChartSeries(forecast), [forecast]);
+  const scale = useMemo(
+    () => createChartScale(forecast, series, showFable),
+    [forecast, series, showFable]
+  );
   const ticks = useMemo(() => dayTicks(scale), [scale]);
   const markers = useMemo(() => resetMarkers(forecast, scale), [forecast, scale]);
   const yTicks = Array.from({ length: Math.floor(scale.max) + 1 }, (_, index) => index);
   const percentX = (ms: number) => `${(scale.x(ms) / CHART_WIDTH) * 100}%`;
   const percentY = (value: number) => `${(scale.y(value) / CHART_HEIGHT) * 100}%`;
 
-  // Hours are counted from the forecast instant, so every snapped position has a data point.
-  const snap = (ms: number) => {
-    const hours = Math.round((ms - scale.nowMs) / HOUR_MS);
-    const clamped = Math.max(-7 * 24, Math.min(7 * 24, hours));
-    return scale.nowMs + clamped * HOUR_MS;
-  };
-
   const handlePointerMove = (event: PointerEvent<HTMLDivElement>) => {
     const rect = event.currentTarget.getBoundingClientRect();
     if (rect.width <= 0) return;
     const fraction = (event.clientX - rect.left) / rect.width;
-    setHoverMs(snap(scale.startMs + fraction * (scale.endMs - scale.startMs)));
+    setHoverMs(snapToHour(scale.startMs + fraction * (scale.endMs - scale.startMs), scale));
   };
 
   const handleKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
@@ -72,57 +57,20 @@ export function PoolChart({ forecast, locale, summary }: PoolChartProps) {
     if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
       event.preventDefault();
       const base = hoverMs ?? scale.nowMs;
-      setHoverMs(snap(base + (event.key === 'ArrowLeft' ? -step : step)));
+      setHoverMs(snapToHour(base + (event.key === 'ArrowLeft' ? -step : step), scale));
     } else if (event.key === 'Escape') {
       setHoverMs(null);
     }
   };
 
-  const readout = (() => {
-    if (hoverMs === null) return null;
-    const past = hoverMs <= scale.nowMs;
-    const rows: { key: string; label: string; value: number | undefined; swatch: string }[] = past
-      ? [
-          {
-            key: 'past',
-            label: t('pool.legend_past'),
-            value: valueNear(series.history, hoverMs),
-            swatch: styles.swatchPast,
-          },
-          ...(showFable
-            ? [
-                {
-                  key: 'fable',
-                  label: t('pool.legend_fable'),
-                  value: valueNear(series.fable, hoverMs),
-                  swatch: styles.swatchFable,
-                },
-              ]
-            : []),
-        ]
-      : [
-          {
-            key: 'quiet',
-            label: t('pool.day_quiet'),
-            value: valueNear(series.projection?.quiet ?? [], hoverMs),
-            swatch: styles.swatchBand,
-          },
-          {
-            key: 'typical',
-            label: t('pool.day_typical'),
-            value: valueNear(series.projection?.typical ?? [], hoverMs),
-            swatch: styles.swatchTypical,
-          },
-          {
-            key: 'busy',
-            label: t('pool.day_busy'),
-            value: valueNear(series.projection?.busy ?? [], hoverMs),
-            swatch: styles.swatchBand,
-          },
-        ];
-    const visible = rows.filter((row) => row.value !== undefined);
-    return { past, rows: visible };
-  })();
+  const rowStyle: Record<ReadoutKey, { label: string; swatch: string }> = {
+    past: { label: t('pool.legend_past'), swatch: styles.swatchPast },
+    fable: { label: t('pool.legend_fable'), swatch: styles.swatchFable },
+    quiet: { label: t('pool.day_quiet'), swatch: styles.swatchBand },
+    typical: { label: t('pool.day_typical'), swatch: styles.swatchTypical },
+    busy: { label: t('pool.day_busy'), swatch: styles.swatchBand },
+  };
+  const readout = hoverMs === null ? null : chartReadout(series, scale, hoverMs, showFable);
 
   return (
     <section className={styles.card} aria-labelledby="pool-chart-title">
@@ -216,11 +164,11 @@ export function PoolChart({ forecast, locale, summary }: PoolChartProps) {
               y1={0}
               y2={CHART_HEIGHT}
             />
-            {hoverMs !== null ? (
+            {readout ? (
               <line
                 className={styles.crosshair}
-                x1={scale.x(hoverMs)}
-                x2={scale.x(hoverMs)}
+                x1={scale.x(readout.atMs)}
+                x2={scale.x(readout.atMs)}
                 y1={0}
                 y2={CHART_HEIGHT}
               />
@@ -246,19 +194,22 @@ export function PoolChart({ forecast, locale, summary }: PoolChartProps) {
           {readout ? (
             <div
               className={styles.tooltip}
-              data-side={scale.x(hoverMs ?? 0) > CHART_WIDTH * 0.6 ? 'left' : 'right'}
-              style={{ left: percentX(hoverMs ?? 0) }}
+              data-side={scale.x(readout.atMs) > CHART_WIDTH * 0.6 ? 'left' : 'right'}
+              style={{ left: percentX(readout.atMs) }}
               role="status"
             >
-              <div className={styles.tooltipTime}>{formatDayHour(hoverMs ?? 0, locale)}</div>
+              <div className={styles.tooltipTime}>{formatDayHour(readout.atMs, locale)}</div>
               {readout.rows.length === 0 ? (
                 <div className={styles.tooltipEmpty}>{t('pool.no_point')}</div>
               ) : (
                 readout.rows.map((row) => (
                   <div key={row.key} className={styles.tooltipRow}>
-                    <span className={`${styles.key} ${row.swatch}`} aria-hidden="true" />
-                    <strong>{formatAccounts(row.value ?? 0)}</strong>
-                    <span>{row.label}</span>
+                    <span
+                      className={`${styles.key} ${rowStyle[row.key].swatch}`}
+                      aria-hidden="true"
+                    />
+                    <strong>{formatAccounts(row.value)}</strong>
+                    <span>{rowStyle[row.key].label}</span>
                   </div>
                 ))
               )}

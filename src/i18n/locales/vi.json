@@ -2444,6 +2444,7 @@
     "refresh_failed": "Lần làm mới gần nhất thất bại: {{message}}. Trang hiển thị dự báo trước đó.",
     "not_served": "Hub này không cung cấp dự báo nhóm tài khoản.",
     "retry": "Thử lại",
+    "verdict_no_accounts": "Không có tài khoản nào có thể phục vụ: hãy đăng nhập hoặc bật một tài khoản.",
     "verdict_no_history": "Chưa đủ lịch sử: dự báo cần 3 ngày đầy đủ.",
     "verdict_enough": "Đủ hạn mức cho 7 ngày tới, kể cả vào ngày bận.",
     "verdict_out_now": "Hạn mức Claude hiện đã dùng hết.",

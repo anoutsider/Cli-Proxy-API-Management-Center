@@ -9,7 +9,7 @@ import {
 } from '@/components/ui/Table/Table';
 import type { PoolAccount } from '@/types/poolForecast';
 import { formatInstantShort, formatRelativeInstant } from '@/utils/quota/relativeTime';
-import { formatAge, isStale, orderAccounts, toPercent } from '../logic';
+import { formatAge, isStale, orderAccounts, toPercent, usedPercent } from '../logic';
 import styles from './AccountTable.module.scss';
 
 type AccountTableProps = {
@@ -76,7 +76,7 @@ export function AccountTable({ accounts, threshold, nowMs, locale }: AccountTabl
                         role="meter"
                         aria-valuemin={0}
                         aria-valuemax={100}
-                        aria-valuenow={toPercent(used)}
+                        aria-valuenow={usedPercent(used)}
                         aria-label={t('pool.col_seven_day')}
                       >
                         <span
@@ -92,7 +92,7 @@ export function AccountTable({ accounts, threshold, nowMs, locale }: AccountTabl
                           />
                         ) : null}
                       </div>
-                      <span className={styles.value}>{toPercent(used)}%</span>
+                      <span className={styles.value}>{usedPercent(used)}%</span>
                     </div>
                   )}
                 </TableCell>
@@ -100,7 +100,7 @@ export function AccountTable({ accounts, threshold, nowMs, locale }: AccountTabl
                   {account.fableUsed === null ? (
                     <span className={styles.muted}>{none}</span>
                   ) : (
-                    <span className={styles.value}>{toPercent(account.fableUsed)}%</span>
+                    <span className={styles.value}>{usedPercent(account.fableUsed)}%</span>
                   )}
                 </TableCell>
                 <TableCell data-label={t('pool.col_resets')}>
