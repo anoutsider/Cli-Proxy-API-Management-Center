@@ -1,0 +1,275 @@
+@use '../../../styles/mixins' as *;
+
+$y-axis-width: 28px;
+$x-axis-height: 22px;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 18px 20px 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  background: var(--bg-primary);
+  min-width: 0;
+
+  @include mobile {
+    padding: 14px 12px 12px;
+  }
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 650;
+  color: var(--text-primary);
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 12px;
+  color: var(--text-secondary);
+
+  li {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+}
+
+/* Line keys mirror line marks; the band key mirrors the filled area. */
+.key {
+  display: inline-block;
+  width: 14px;
+  height: 0;
+  border-top: 2px solid currentColor;
+  border-radius: 1px;
+  flex: none;
+}
+
+.keyBox {
+  display: inline-block;
+  width: 14px;
+  height: 10px;
+  border-radius: 2px;
+  flex: none;
+}
+
+.swatchPast {
+  color: var(--text-primary);
+}
+
+.swatchTypical {
+  color: var(--viz-forecast);
+}
+
+.swatchFable {
+  color: var(--viz-fable);
+  border-top-style: dashed;
+}
+
+.swatchBand {
+  color: var(--viz-forecast);
+
+  &.keyBox {
+    background: color-mix(in srgb, var(--viz-forecast) 22%, transparent);
+    border: 1px solid color-mix(in srgb, var(--viz-forecast) 45%, transparent);
+  }
+}
+
+.frame {
+  display: grid;
+  grid-template-columns: $y-axis-width minmax(0, 1fr);
+  grid-template-rows: auto $x-axis-height;
+}
+
+.yAxis {
+  position: relative;
+  font-size: 11px;
+  color: var(--text-tertiary);
+  font-variant-numeric: tabular-nums;
+
+  span {
+    position: absolute;
+    right: 8px;
+    transform: translateY(-50%);
+    line-height: 1;
+  }
+}
+
+.plot {
+  position: relative;
+  height: 280px;
+  border-radius: 4px;
+  outline: none;
+  touch-action: pan-y;
+  cursor: crosshair;
+
+  &:focus-visible {
+    box-shadow: 0 0 0 2px var(--primary-30);
+  }
+
+  @include mobile {
+    height: 200px;
+  }
+}
+
+.svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+
+  path,
+  line {
+    vector-effect: non-scaling-stroke;
+  }
+}
+
+.grid {
+  stroke: var(--border-color);
+  stroke-width: 1;
+}
+
+.band {
+  fill: color-mix(in srgb, var(--viz-forecast) 20%, transparent);
+  stroke: none;
+}
+
+.typical {
+  fill: none;
+  stroke: var(--viz-forecast);
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+
+.past {
+  fill: none;
+  stroke: var(--text-primary);
+  stroke-width: 2;
+  stroke-linejoin: round;
+}
+
+.fable {
+  fill: none;
+  stroke: var(--viz-fable);
+  stroke-width: 1.25;
+  stroke-dasharray: 4 3;
+}
+
+.now {
+  stroke: var(--text-secondary);
+  stroke-width: 1;
+  stroke-dasharray: 3 3;
+}
+
+.crosshair {
+  stroke: var(--text-tertiary);
+  stroke-width: 1;
+}
+
+.nowLabel {
+  position: absolute;
+  top: -2px;
+  transform: translate(-50%, -100%);
+  padding: 0 4px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--bg-primary);
+  pointer-events: none;
+}
+
+/* Reset instants sit on the baseline: the line steps up above each one. */
+.marker {
+  position: absolute;
+  bottom: 0;
+  width: 10px;
+  height: 7px;
+  transform: translate(-50%, 50%);
+  background: var(--text-tertiary);
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+.tooltip {
+  position: absolute;
+  top: 8px;
+  z-index: 2;
+  min-width: 140px;
+  padding: 8px 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--floating-surface);
+  box-shadow: var(--floating-shadow);
+  font-size: 12px;
+  color: var(--text-secondary);
+  pointer-events: none;
+  transform: translateX(10px);
+
+  &[data-side='left'] {
+    transform: translateX(calc(-100% - 10px));
+  }
+}
+
+.tooltipTime {
+  margin-bottom: 4px;
+  color: var(--text-tertiary);
+}
+
+.tooltipRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1.6;
+
+  strong {
+    min-width: 2.5em;
+    color: var(--text-primary);
+    font-weight: 650;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.tooltipEmpty {
+  color: var(--text-tertiary);
+}
+
+.xAxis {
+  grid-column: 2;
+  position: relative;
+  font-size: 11px;
+  color: var(--text-tertiary);
+
+  span {
+    position: absolute;
+    top: 6px;
+    white-space: nowrap;
+    line-height: 1;
+  }
+
+  @include mobile {
+    span[data-odd='true'] {
+      display: none;
+    }
+  }
+}
+
+.caption {
+  margin: 0;
+  font-size: 12px;
+  color: var(--text-tertiary);
+}

@@ -1,0 +1,1040 @@
+{
+  "generatedAt": "2026-11-07T20:17:33Z",
+  "threshold": 0.9,
+  "drainWindowHours": 24,
+  "historyDays": 23,
+  "accounts": [
+    {
+      "id": "claude-ana@example.com.json",
+      "email": "ana@example.com",
+      "state": "needs-sign-in",
+      "sevenDay": {
+        "used": 0.55,
+        "resetsAt": "2026-11-08T05:17:00Z",
+        "observedAt": "2026-11-07T20:15:33Z"
+      },
+      "models": [
+        {
+          "name": "Fable",
+          "used": 0.33,
+          "resetsAt": "2026-11-08T05:17:00Z"
+        }
+      ],
+      "leftAtReset": null
+    },
+    {
+      "id": "claude-ben@example.com.json",
+      "email": "ben@example.com",
+      "state": "needs-sign-in",
+      "sevenDay": {
+        "used": 0.96,
+        "resetsAt": "2026-11-08T14:17:00Z",
+        "observedAt": "2026-11-07T20:15:33Z"
+      },
+      "models": [
+        {
+          "name": "Fable",
+          "used": 0.48,
+          "resetsAt": "2026-11-08T14:17:00Z"
+        }
+      ],
+      "leftAtReset": null
+    },
+    {
+      "id": "claude-cal@example.com.json",
+      "email": "cal@example.com",
+      "state": "needs-sign-in",
+      "sevenDay": {
+        "used": 0.38,
+        "resetsAt": "2026-11-11T00:17:00Z",
+        "observedAt": "2026-11-07T20:15:33Z"
+      },
+      "models": [
+        {
+          "name": "Fable",
+          "used": 0.266,
+          "resetsAt": "2026-11-11T00:17:00Z"
+        }
+      ],
+      "leftAtReset": null
+    },
+    {
+      "id": "claude-dee@example.com.json",
+      "email": "dee@example.com",
+      "state": "needs-sign-in",
+      "sevenDay": {
+        "used": 0.93,
+        "resetsAt": "2026-11-12T06:17:00Z",
+        "observedAt": "2026-11-07T20:15:33Z"
+      },
+      "models": [
+        {
+          "name": "Fable",
+          "used": 0.372,
+          "resetsAt": "2026-11-12T06:17:00Z"
+        }
+      ],
+      "leftAtReset": null
+    },
+    {
+      "id": "claude-eli@example.com.json",
+      "email": "eli@example.com",
+      "state": "needs-sign-in",
+      "sevenDay": {
+        "used": 0.3,
+        "resetsAt": "2026-11-09T20:17:00Z",
+        "observedAt": "2026-11-07T20:15:33Z"
+      },
+      "models": [
+        {
+          "name": "Fable",
+          "used": 0.15,
+          "resetsAt": "2026-11-09T20:17:00Z"
+        }
+      ],
+      "leftAtReset": null
+    },
+    {
+      "id": "claude-fay@example.com.json",
+      "email": "fay@example.com",
+      "state": "needs-sign-in",
+      "sevenDay": {
+        "used": 0.45,
+        "resetsAt": "2026-11-09T02:17:00Z",
+        "observedAt": "2026-11-07T20:15:33Z"
+      },
+      "models": [
+        {
+          "name": "Fable",
+          "used": 0.225,
+          "resetsAt": "2026-11-09T02:17:00Z"
+        }
+      ],
+      "leftAtReset": null
+    },
+    {
+      "id": "claude-gus@example.com.json",
+      "email": "gus@example.com",
+      "state": "needs-sign-in",
+      "sevenDay": {
+        "used": 0.2,
+        "resetsAt": "2026-11-12T20:17:00Z",
+        "observedAt": "2026-11-07T20:15:33Z"
+      },
+      "models": [
+        {
+          "name": "Fable",
+          "used": 0.1,
+          "resetsAt": "2026-11-12T20:17:00Z"
+        }
+      ],
+      "leftAtReset": null
+    }
+  ],
+  "pool": {
+    "accounts": 0,
+    "remaining": 0,
+    "fableRemaining": 0,
+    "burnPerDay": {
+      "quiet": 0.5194,
+      "typical": 0.5968,
+      "busy": 1.027,
+      "last24h": 0.2128
+    },
+    "runsOutAt": {
+      "quiet": null,
+      "typical": null,
+      "busy": null
+    },
+    "nextReset": null
+  },
+  "history": [
+    {
+      "at": "2026-10-31T21:00:00Z",
+      "remaining": 3.3937,
+      "fableRemaining": 5.1597
+    },
+    {
+      "at": "2026-10-31T22:00:00Z",
+      "remaining": 3.3524,
+      "fableRemaining": 5.1394
+    },
+    {
+      "at": "2026-10-31T23:00:00Z",
+      "remaining": 3.3111,
+      "fableRemaining": 5.1191
+    },
+    {
+      "at": "2026-11-01T00:00:00Z",
+      "remaining": 3.2698,
+      "fableRemaining": 5.0987
+    },
+    {
+      "at": "2026-11-01T01:00:00Z",
+      "remaining": 3.2393,
+      "fableRemaining": 5.0837
+    },
+    {
+      "at": "2026-11-01T02:00:00Z",
+      "remaining": 3.2087,
+      "fableRemaining": 5.0687
+    },
+    {
+      "at": "2026-11-01T03:00:00Z",
+      "remaining": 3.1782,
+      "fableRemaining": 5.0536
+    },
+    {
+      "at": "2026-11-01T04:00:00Z",
+      "remaining": 3.1477,
+      "fableRemaining": 5.0386
+    },
+    {
+      "at": "2026-11-01T05:00:00Z",
+      "remaining": 3.1171,
+      "fableRemaining": 5.0236
+    },
+    {
+      "at": "2026-11-01T06:00:00Z",
+      "remaining": 3.6335,
+      "fableRemaining": 5.3365
+    },
+    {
+      "at": "2026-11-01T07:00:00Z",
+      "remaining": 3.6145,
+      "fableRemaining": 5.3261
+    },
+    {
+      "at": "2026-11-01T08:00:00Z",
+      "remaining": 3.5956,
+      "fableRemaining": 5.3157
+    },
+    {
+      "at": "2026-11-01T09:00:00Z",
+      "remaining": 3.5766,
+      "fableRemaining": 5.3053
+    },
+    {
+      "at": "2026-11-01T10:00:00Z",
+      "remaining": 3.5577,
+      "fableRemaining": 5.2949
+    },
+    {
+      "at": "2026-11-01T11:00:00Z",
+      "remaining": 3.5387,
+      "fableRemaining": 5.2845
+    },
+    {
+      "at": "2026-11-01T12:00:00Z",
+      "remaining": 3.5206,
+      "fableRemaining": 5.2745
+    },
+    {
+      "at": "2026-11-01T13:00:00Z",
+      "remaining": 3.5068,
+      "fableRemaining": 5.2667
+    },
+    {
+      "at": "2026-11-01T14:00:00Z",
+      "remaining": 3.493,
+      "fableRemaining": 5.2588
+    },
+    {
+      "at": "2026-11-01T15:00:00Z",
+      "remaining": 4.4755,
+      "fableRemaining": 5.7492
+    },
+    {
+      "at": "2026-11-01T16:00:00Z",
+      "remaining": 4.4565,
+      "fableRemaining": 5.7388
+    },
+    {
+      "at": "2026-11-01T17:00:00Z",
+      "remaining": 4.4376,
+      "fableRemaining": 5.7284
+    },
+    {
+      "at": "2026-11-01T18:00:00Z",
+      "remaining": 4.4186,
+      "fableRemaining": 5.718
+    },
+    {
+      "at": "2026-11-01T19:00:00Z",
+      "remaining": 4.3997,
+      "fableRemaining": 5.7076
+    },
+    {
+      "at": "2026-11-01T20:00:00Z",
+      "remaining": 4.3807,
+      "fableRemaining": 5.6972
+    },
+    {
+      "at": "2026-11-01T21:00:00Z",
+      "remaining": 4.3618,
+      "fableRemaining": 5.6868
+    },
+    {
+      "at": "2026-11-01T22:00:00Z",
+      "remaining": 4.3428,
+      "fableRemaining": 5.6764
+    },
+    {
+      "at": "2026-11-01T23:00:00Z",
+      "remaining": 4.3239,
+      "fableRemaining": 5.666
+    },
+    {
+      "at": "2026-11-02T00:00:00Z",
+      "remaining": 4.3049,
+      "fableRemaining": 5.6556
+    },
+    {
+      "at": "2026-11-02T01:00:00Z",
+      "remaining": 4.2715,
+      "fableRemaining": 5.6372
+    },
+    {
+      "at": "2026-11-02T02:00:00Z",
+      "remaining": 4.2381,
+      "fableRemaining": 5.6189
+    },
+    {
+      "at": "2026-11-02T03:00:00Z",
+      "remaining": 4.727,
+      "fableRemaining": 5.8617
+    },
+    {
+      "at": "2026-11-02T04:00:00Z",
+      "remaining": 4.6936,
+      "fableRemaining": 5.8434
+    },
+    {
+      "at": "2026-11-02T05:00:00Z",
+      "remaining": 4.6602,
+      "fableRemaining": 5.825
+    },
+    {
+      "at": "2026-11-02T06:00:00Z",
+      "remaining": 4.6267,
+      "fableRemaining": 5.8067
+    },
+    {
+      "at": "2026-11-02T07:00:00Z",
+      "remaining": 4.5933,
+      "fableRemaining": 5.7883
+    },
+    {
+      "at": "2026-11-02T08:00:00Z",
+      "remaining": 4.5599,
+      "fableRemaining": 5.77
+    },
+    {
+      "at": "2026-11-02T09:00:00Z",
+      "remaining": 4.5264,
+      "fableRemaining": 5.7516
+    },
+    {
+      "at": "2026-11-02T10:00:00Z",
+      "remaining": 4.493,
+      "fableRemaining": 5.7333
+    },
+    {
+      "at": "2026-11-02T11:00:00Z",
+      "remaining": 4.4595,
+      "fableRemaining": 5.7149
+    },
+    {
+      "at": "2026-11-02T12:00:00Z",
+      "remaining": 4.4261,
+      "fableRemaining": 5.6966
+    },
+    {
+      "at": "2026-11-02T13:00:00Z",
+      "remaining": 4.3927,
+      "fableRemaining": 5.6782
+    },
+    {
+      "at": "2026-11-02T14:00:00Z",
+      "remaining": 4.3592,
+      "fableRemaining": 5.6599
+    },
+    {
+      "at": "2026-11-02T15:00:00Z",
+      "remaining": 4.3258,
+      "fableRemaining": 5.6415
+    },
+    {
+      "at": "2026-11-02T16:00:00Z",
+      "remaining": 4.2924,
+      "fableRemaining": 5.6232
+    },
+    {
+      "at": "2026-11-02T17:00:00Z",
+      "remaining": 4.2589,
+      "fableRemaining": 5.6048
+    },
+    {
+      "at": "2026-11-02T18:00:00Z",
+      "remaining": 4.2255,
+      "fableRemaining": 5.5865
+    },
+    {
+      "at": "2026-11-02T19:00:00Z",
+      "remaining": 4.192,
+      "fableRemaining": 5.5682
+    },
+    {
+      "at": "2026-11-02T20:00:00Z",
+      "remaining": 4.1586,
+      "fableRemaining": 5.5498
+    },
+    {
+      "at": "2026-11-02T21:00:00Z",
+      "remaining": 4.5693,
+      "fableRemaining": 5.7535
+    },
+    {
+      "at": "2026-11-02T22:00:00Z",
+      "remaining": 4.5359,
+      "fableRemaining": 5.7352
+    },
+    {
+      "at": "2026-11-02T23:00:00Z",
+      "remaining": 4.5025,
+      "fableRemaining": 5.7168
+    },
+    {
+      "at": "2026-11-03T00:00:00Z",
+      "remaining": 4.469,
+      "fableRemaining": 5.6985
+    },
+    {
+      "at": "2026-11-03T01:00:00Z",
+      "remaining": 4.4557,
+      "fableRemaining": 5.6911
+    },
+    {
+      "at": "2026-11-03T02:00:00Z",
+      "remaining": 4.4423,
+      "fableRemaining": 5.6838
+    },
+    {
+      "at": "2026-11-03T03:00:00Z",
+      "remaining": 4.4289,
+      "fableRemaining": 5.6765
+    },
+    {
+      "at": "2026-11-03T04:00:00Z",
+      "remaining": 4.4155,
+      "fableRemaining": 5.6691
+    },
+    {
+      "at": "2026-11-03T05:00:00Z",
+      "remaining": 4.4022,
+      "fableRemaining": 5.6618
+    },
+    {
+      "at": "2026-11-03T06:00:00Z",
+      "remaining": 4.3888,
+      "fableRemaining": 5.6544
+    },
+    {
+      "at": "2026-11-03T07:00:00Z",
+      "remaining": 4.3754,
+      "fableRemaining": 5.6471
+    },
+    {
+      "at": "2026-11-03T08:00:00Z",
+      "remaining": 4.362,
+      "fableRemaining": 5.6398
+    },
+    {
+      "at": "2026-11-03T09:00:00Z",
+      "remaining": 4.3487,
+      "fableRemaining": 5.6324
+    },
+    {
+      "at": "2026-11-03T10:00:00Z",
+      "remaining": 4.3353,
+      "fableRemaining": 5.6251
+    },
+    {
+      "at": "2026-11-03T11:00:00Z",
+      "remaining": 4.3219,
+      "fableRemaining": 5.6177
+    },
+    {
+      "at": "2026-11-03T12:00:00Z",
+      "remaining": 4.3085,
+      "fableRemaining": 5.6104
+    },
+    {
+      "at": "2026-11-03T13:00:00Z",
+      "remaining": 4.2952,
+      "fableRemaining": 5.6031
+    },
+    {
+      "at": "2026-11-03T14:00:00Z",
+      "remaining": 4.2818,
+      "fableRemaining": 5.5957
+    },
+    {
+      "at": "2026-11-03T15:00:00Z",
+      "remaining": 4.2684,
+      "fableRemaining": 5.5884
+    },
+    {
+      "at": "2026-11-03T16:00:00Z",
+      "remaining": 4.255,
+      "fableRemaining": 5.5811
+    },
+    {
+      "at": "2026-11-03T17:00:00Z",
+      "remaining": 4.2417,
+      "fableRemaining": 5.5737
+    },
+    {
+      "at": "2026-11-03T18:00:00Z",
+      "remaining": 4.2283,
+      "fableRemaining": 5.5664
+    },
+    {
+      "at": "2026-11-03T19:00:00Z",
+      "remaining": 4.2149,
+      "fableRemaining": 5.559
+    },
+    {
+      "at": "2026-11-03T20:00:00Z",
+      "remaining": 4.2015,
+      "fableRemaining": 5.5517
+    },
+    {
+      "at": "2026-11-03T21:00:00Z",
+      "remaining": 4.1882,
+      "fableRemaining": 5.5444
+    },
+    {
+      "at": "2026-11-03T22:00:00Z",
+      "remaining": 4.1748,
+      "fableRemaining": 5.537
+    },
+    {
+      "at": "2026-11-03T23:00:00Z",
+      "remaining": 4.1614,
+      "fableRemaining": 5.5297
+    },
+    {
+      "at": "2026-11-04T00:00:00Z",
+      "remaining": 4.148,
+      "fableRemaining": 5.5223
+    },
+    {
+      "at": "2026-11-04T01:00:00Z",
+      "remaining": 4.7739,
+      "fableRemaining": 5.9641
+    },
+    {
+      "at": "2026-11-04T02:00:00Z",
+      "remaining": 4.7493,
+      "fableRemaining": 5.9507
+    },
+    {
+      "at": "2026-11-04T03:00:00Z",
+      "remaining": 4.7248,
+      "fableRemaining": 5.9372
+    },
+    {
+      "at": "2026-11-04T04:00:00Z",
+      "remaining": 4.7003,
+      "fableRemaining": 5.9237
+    },
+    {
+      "at": "2026-11-04T05:00:00Z",
+      "remaining": 4.6758,
+      "fableRemaining": 5.9103
+    },
+    {
+      "at": "2026-11-04T06:00:00Z",
+      "remaining": 4.6513,
+      "fableRemaining": 5.8968
+    },
+    {
+      "at": "2026-11-04T07:00:00Z",
+      "remaining": 4.6267,
+      "fableRemaining": 5.8834
+    },
+    {
+      "at": "2026-11-04T08:00:00Z",
+      "remaining": 4.6022,
+      "fableRemaining": 5.8699
+    },
+    {
+      "at": "2026-11-04T09:00:00Z",
+      "remaining": 4.5777,
+      "fableRemaining": 5.8565
+    },
+    {
+      "at": "2026-11-04T10:00:00Z",
+      "remaining": 4.5532,
+      "fableRemaining": 5.843
+    },
+    {
+      "at": "2026-11-04T11:00:00Z",
+      "remaining": 4.5286,
+      "fableRemaining": 5.8296
+    },
+    {
+      "at": "2026-11-04T12:00:00Z",
+      "remaining": 4.5041,
+      "fableRemaining": 5.8161
+    },
+    {
+      "at": "2026-11-04T13:00:00Z",
+      "remaining": 4.4796,
+      "fableRemaining": 5.8026
+    },
+    {
+      "at": "2026-11-04T14:00:00Z",
+      "remaining": 4.4551,
+      "fableRemaining": 5.7892
+    },
+    {
+      "at": "2026-11-04T15:00:00Z",
+      "remaining": 4.4306,
+      "fableRemaining": 5.7757
+    },
+    {
+      "at": "2026-11-04T16:00:00Z",
+      "remaining": 4.406,
+      "fableRemaining": 5.7623
+    },
+    {
+      "at": "2026-11-04T17:00:00Z",
+      "remaining": 4.3815,
+      "fableRemaining": 5.7488
+    },
+    {
+      "at": "2026-11-04T18:00:00Z",
+      "remaining": 4.357,
+      "fableRemaining": 5.7354
+    },
+    {
+      "at": "2026-11-04T19:00:00Z",
+      "remaining": 4.3325,
+      "fableRemaining": 5.7219
+    },
+    {
+      "at": "2026-11-04T20:00:00Z",
+      "remaining": 4.308,
+      "fableRemaining": 5.7084
+    },
+    {
+      "at": "2026-11-04T21:00:00Z",
+      "remaining": 4.2834,
+      "fableRemaining": 5.695
+    },
+    {
+      "at": "2026-11-04T22:00:00Z",
+      "remaining": 4.2589,
+      "fableRemaining": 5.6815
+    },
+    {
+      "at": "2026-11-04T23:00:00Z",
+      "remaining": 4.2344,
+      "fableRemaining": 5.6681
+    },
+    {
+      "at": "2026-11-05T00:00:00Z",
+      "remaining": 4.2099,
+      "fableRemaining": 5.6546
+    },
+    {
+      "at": "2026-11-05T01:00:00Z",
+      "remaining": 4.1887,
+      "fableRemaining": 5.643
+    },
+    {
+      "at": "2026-11-05T02:00:00Z",
+      "remaining": 4.1675,
+      "fableRemaining": 5.6314
+    },
+    {
+      "at": "2026-11-05T03:00:00Z",
+      "remaining": 4.1463,
+      "fableRemaining": 5.6198
+    },
+    {
+      "at": "2026-11-05T04:00:00Z",
+      "remaining": 4.1252,
+      "fableRemaining": 5.6081
+    },
+    {
+      "at": "2026-11-05T05:00:00Z",
+      "remaining": 4.104,
+      "fableRemaining": 5.5965
+    },
+    {
+      "at": "2026-11-05T06:00:00Z",
+      "remaining": 4.0828,
+      "fableRemaining": 5.5849
+    },
+    {
+      "at": "2026-11-05T07:00:00Z",
+      "remaining": 5.0524,
+      "fableRemaining": 5.9696
+    },
+    {
+      "at": "2026-11-05T08:00:00Z",
+      "remaining": 5.0182,
+      "fableRemaining": 5.9528
+    },
+    {
+      "at": "2026-11-05T09:00:00Z",
+      "remaining": 4.9841,
+      "fableRemaining": 5.936
+    },
+    {
+      "at": "2026-11-05T10:00:00Z",
+      "remaining": 4.95,
+      "fableRemaining": 5.9192
+    },
+    {
+      "at": "2026-11-05T11:00:00Z",
+      "remaining": 4.9159,
+      "fableRemaining": 5.9023
+    },
+    {
+      "at": "2026-11-05T12:00:00Z",
+      "remaining": 4.8817,
+      "fableRemaining": 5.8855
+    },
+    {
+      "at": "2026-11-05T13:00:00Z",
+      "remaining": 4.8476,
+      "fableRemaining": 5.8687
+    },
+    {
+      "at": "2026-11-05T14:00:00Z",
+      "remaining": 4.8135,
+      "fableRemaining": 5.8519
+    },
+    {
+      "at": "2026-11-05T15:00:00Z",
+      "remaining": 4.7793,
+      "fableRemaining": 5.8351
+    },
+    {
+      "at": "2026-11-05T16:00:00Z",
+      "remaining": 4.7452,
+      "fableRemaining": 5.8183
+    },
+    {
+      "at": "2026-11-05T17:00:00Z",
+      "remaining": 4.7111,
+      "fableRemaining": 5.8015
+    },
+    {
+      "at": "2026-11-05T18:00:00Z",
+      "remaining": 4.677,
+      "fableRemaining": 5.7847
+    },
+    {
+      "at": "2026-11-05T19:00:00Z",
+      "remaining": 4.6428,
+      "fableRemaining": 5.7679
+    },
+    {
+      "at": "2026-11-05T20:00:00Z",
+      "remaining": 4.6087,
+      "fableRemaining": 5.7511
+    },
+    {
+      "at": "2026-11-05T21:00:00Z",
+      "remaining": 5.1786,
+      "fableRemaining": 6.0364
+    },
+    {
+      "at": "2026-11-05T22:00:00Z",
+      "remaining": 5.1445,
+      "fableRemaining": 6.0196
+    },
+    {
+      "at": "2026-11-05T23:00:00Z",
+      "remaining": 5.1104,
+      "fableRemaining": 6.0028
+    },
+    {
+      "at": "2026-11-06T00:00:00Z",
+      "remaining": 5.0762,
+      "fableRemaining": 5.986
+    },
+    {
+      "at": "2026-11-06T01:00:00Z",
+      "remaining": 5.0403,
+      "fableRemaining": 5.9683
+    },
+    {
+      "at": "2026-11-06T02:00:00Z",
+      "remaining": 5.0044,
+      "fableRemaining": 5.9506
+    },
+    {
+      "at": "2026-11-06T03:00:00Z",
+      "remaining": 4.9685,
+      "fableRemaining": 5.9329
+    },
+    {
+      "at": "2026-11-06T04:00:00Z",
+      "remaining": 4.9326,
+      "fableRemaining": 5.9152
+    },
+    {
+      "at": "2026-11-06T05:00:00Z",
+      "remaining": 4.8966,
+      "fableRemaining": 5.8975
+    },
+    {
+      "at": "2026-11-06T06:00:00Z",
+      "remaining": 4.8607,
+      "fableRemaining": 5.8798
+    },
+    {
+      "at": "2026-11-06T07:00:00Z",
+      "remaining": 4.8248,
+      "fableRemaining": 5.8622
+    },
+    {
+      "at": "2026-11-06T08:00:00Z",
+      "remaining": 4.7889,
+      "fableRemaining": 5.8445
+    },
+    {
+      "at": "2026-11-06T09:00:00Z",
+      "remaining": 4.7529,
+      "fableRemaining": 5.8268
+    },
+    {
+      "at": "2026-11-06T10:00:00Z",
+      "remaining": 4.717,
+      "fableRemaining": 5.8091
+    },
+    {
+      "at": "2026-11-06T11:00:00Z",
+      "remaining": 4.6811,
+      "fableRemaining": 5.7914
+    },
+    {
+      "at": "2026-11-06T12:00:00Z",
+      "remaining": 4.6452,
+      "fableRemaining": 5.7737
+    },
+    {
+      "at": "2026-11-06T13:00:00Z",
+      "remaining": 4.6093,
+      "fableRemaining": 5.756
+    },
+    {
+      "at": "2026-11-06T14:00:00Z",
+      "remaining": 4.5733,
+      "fableRemaining": 5.7384
+    },
+    {
+      "at": "2026-11-06T15:00:00Z",
+      "remaining": 4.5374,
+      "fableRemaining": 5.7207
+    },
+    {
+      "at": "2026-11-06T16:00:00Z",
+      "remaining": 4.5015,
+      "fableRemaining": 5.703
+    },
+    {
+      "at": "2026-11-06T17:00:00Z",
+      "remaining": 4.4656,
+      "fableRemaining": 5.6853
+    },
+    {
+      "at": "2026-11-06T18:00:00Z",
+      "remaining": 4.4296,
+      "fableRemaining": 5.6676
+    },
+    {
+      "at": "2026-11-06T19:00:00Z",
+      "remaining": 4.3937,
+      "fableRemaining": 5.6499
+    },
+    {
+      "at": "2026-11-06T20:00:00Z",
+      "remaining": 4.3578,
+      "fableRemaining": 5.6322
+    },
+    {
+      "at": "2026-11-06T21:00:00Z",
+      "remaining": 4.3219,
+      "fableRemaining": 5.6146
+    },
+    {
+      "at": "2026-11-06T22:00:00Z",
+      "remaining": 4.2859,
+      "fableRemaining": 5.5969
+    },
+    {
+      "at": "2026-11-06T23:00:00Z",
+      "remaining": 4.25,
+      "fableRemaining": 5.5792
+    },
+    {
+      "at": "2026-11-07T00:00:00Z",
+      "remaining": 4.2141,
+      "fableRemaining": 5.5615
+    },
+    {
+      "at": "2026-11-07T01:00:00Z",
+      "remaining": 2.8175,
+      "fableRemaining": 3.9198
+    },
+    {
+      "at": "2026-11-07T02:00:00Z",
+      "remaining": 1.8279,
+      "fableRemaining": 2.4264
+    },
+    {
+      "at": "2026-11-07T03:00:00Z",
+      "remaining": 0,
+      "fableRemaining": 0
+    },
+    {
+      "at": "2026-11-07T04:00:00Z",
+      "remaining": 0,
+      "fableRemaining": 0
+    },
+    {
+      "at": "2026-11-07T05:00:00Z",
+      "remaining": 0,
+      "fableRemaining": 0
+    },
+    {
+      "at": "2026-11-07T06:00:00Z",
+      "remaining": 0,
+      "fableRemaining": 0
+    },
+    {
+      "at": "2026-11-07T07:00:00Z",
+      "remaining": 0,
+      "fableRemaining": 0
+    },
+    {
+      "at": "2026-11-07T08:00:00Z",
+      "remaining": 0,
+      "fableRemaining": 0
+    },
+    {
+      "at": "2026-11-07T09:00:00Z",
+      "remaining": 0,
+      "fableRemaining": 0
+    },
+    {
+      "at": "2026-11-07T10:00:00Z",
+      "remaining": 0,
+      "fableRemaining": 0
+    },
+    {
+      "at": "2026-11-07T11:00:00Z",
+      "remaining": 0,
+      "fableRemaining": 0
+    },
+    {
+      "at": "2026-11-07T12:00:00Z",
+      "remaining": 0,
+      "fableRemaining": 0
+    },
+    {
+      "at": "2026-11-07T13:00:00Z",
+      "remaining": 0,
+      "fableRemaining": 0
+    },
+    {
+      "at": "2026-11-07T14:00:00Z",
+      "remaining": 0,
+      "fableRemaining": 0
+    },
+    {
+      "at": "2026-11-07T15:00:00Z",
+      "remaining": 0,
+      "fableRemaining": 0
+    },
+    {
+      "at": "2026-11-07T16:00:00Z",
+      "remaining": 0,
+      "fableRemaining": 0
+    },
+    {
+      "at": "2026-11-07T17:00:00Z",
+      "remaining": 0,
+      "fableRemaining": 0
+    },
+    {
+      "at": "2026-11-07T18:00:00Z",
+      "remaining": 0,
+      "fableRemaining": 0
+    },
+    {
+      "at": "2026-11-07T19:00:00Z",
+      "remaining": 0,
+      "fableRemaining": 0
+    },
+    {
+      "at": "2026-11-07T20:00:00Z",
+      "remaining": 0,
+      "fableRemaining": 0
+    }
+  ],
+  "projection": {
+    "quiet": null,
+    "typical": null,
+    "busy": null
+  },
+  "accuracy": {
+    "forecastAt": "2026-11-06T00:00:00Z",
+    "predictedTypical": 0.5968,
+    "actual": 0.8618
+  },
+  "alerts": [
+    {
+      "kind": "sign-in",
+      "key": "sign-in:claude-ana@example.com.json:1794017853",
+      "message": "ana@example.com needs signing in on the hub panel. Its login was refused at 02:17 UTC. The other 0 accounts are still serving."
+    },
+    {
+      "kind": "sign-in",
+      "key": "sign-in:claude-ben@example.com.json:1794014253",
+      "message": "ben@example.com needs signing in on the hub panel. Its login was refused at 01:17 UTC. The other 0 accounts are still serving."
+    },
+    {
+      "kind": "sign-in",
+      "key": "sign-in:claude-cal@example.com.json:1794010653",
+      "message": "cal@example.com needs signing in on the hub panel. Its login was refused at 00:17 UTC. The other 0 accounts are still serving."
+    },
+    {
+      "kind": "sign-in",
+      "key": "sign-in:claude-dee@example.com.json:1794017853",
+      "message": "dee@example.com needs signing in on the hub panel. Its login was refused at 02:17 UTC. The other 0 accounts are still serving."
+    },
+    {
+      "kind": "sign-in",
+      "key": "sign-in:claude-eli@example.com.json:1794014253",
+      "message": "eli@example.com needs signing in on the hub panel. Its login was refused at 01:17 UTC. The other 0 accounts are still serving."
+    },
+    {
+      "kind": "sign-in",
+      "key": "sign-in:claude-fay@example.com.json:1794010653",
+      "message": "fay@example.com needs signing in on the hub panel. Its login was refused at 00:17 UTC. The other 0 accounts are still serving."
+    },
+    {
+      "kind": "sign-in",
+      "key": "sign-in:claude-gus@example.com.json:1794017853",
+      "message": "gus@example.com needs signing in on the hub panel. Its login was refused at 02:17 UTC. The other 0 accounts are still serving."
+    }
+  ]
+}

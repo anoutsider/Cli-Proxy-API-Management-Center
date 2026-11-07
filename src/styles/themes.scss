@@ -84,6 +84,9 @@
   // 规则：翡翠绿只表达「活的流量」。
   --viz-success: #10b981;
   --viz-failure: #c65746;
+  // Pool forecast chart: forecast band and line, and the secondary Fable line.
+  --viz-forecast: #b45309;
+  --viz-fable: #4f6bd8;
 
   // 动效词汇表：内置 ease 太弱，交互反馈统一用强减速曲线。
   // 按压 160ms / 悬停 200ms，UI 动效不超过 300ms。
@@ -238,6 +241,8 @@
   // 因此深色单独降一档。三套主题均已通过对比度/色盲/亮度校验。
   --viz-success: #0fae78;
   --viz-failure: #cf4b3a;
+  --viz-forecast: #c97a0a;
+  --viz-fable: #6a7fdc;
 }
 
 @media (max-width: 768px),
