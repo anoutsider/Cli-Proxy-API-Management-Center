@@ -1,8 +1,7 @@
 /**
  * Account hub pool forecast.
  *
- * The hub serves this endpoint under the v0 management prefix only, so the request uses an
- * absolute URL; `apiClient` still adds the management key and normalizes errors.
+ * Served by the account hub fork (anoutsider/CLIProxyAPI) under the v8 observability group.
  */
 
 import { apiClient } from './client';
@@ -16,10 +15,9 @@ import {
   type PoolHistoryPoint,
   type PoolPoint,
 } from '@/types/poolForecast';
-import { normalizeApiBase } from '@/utils/connection';
 import { isRecord } from '@/utils/helpers';
 
-export const POOL_FORECAST_PATH = '/v0/management/pool-forecast';
+export const POOL_FORECAST_PATH = '/observability/pool-forecast';
 
 const DAY_KINDS: PoolDayKind[] = ['quiet', 'typical', 'busy'];
 
@@ -164,9 +162,8 @@ export function normalizePoolForecast(value: unknown): PoolForecast {
 
 export const poolForecastApi = {
   /** GET the hub's pool forecast with the current management key. */
-  async fetch(apiBase: string): Promise<PoolForecast> {
-    const base = normalizeApiBase(apiBase);
-    const raw = await apiClient.get<unknown>(`${base}${POOL_FORECAST_PATH}`);
+  async fetch(): Promise<PoolForecast> {
+    const raw = await apiClient.get<unknown>(POOL_FORECAST_PATH);
     return normalizePoolForecast(raw);
   },
 };

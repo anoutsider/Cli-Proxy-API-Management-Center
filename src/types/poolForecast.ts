@@ -1,5 +1,5 @@
 /**
- * Claude account pool forecast served by the account hub at `/v0/management/pool-forecast`.
+ * Claude account pool forecast served by the account hub at `/v8/management/observability/pool-forecast`.
  *
  * Usage values are fractions (0 to 1) of one account's weekly quota, so they add up across
  * accounts. Instants are epoch milliseconds, or null when the hub has no value.

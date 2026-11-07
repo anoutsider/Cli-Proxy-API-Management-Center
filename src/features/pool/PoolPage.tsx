@@ -46,7 +46,7 @@ export function PoolPage() {
     lastLoadRef.current = Date.now();
     setLoading(true);
     try {
-      const next = await poolForecastApi.fetch(apiBase);
+      const next = await poolForecastApi.fetch();
       if (!isCurrent()) return;
       setForecast(next);
       setError(null);
@@ -56,7 +56,7 @@ export function PoolPage() {
     } finally {
       if (isCurrent()) setLoading(false);
     }
-  }, [connected, apiBase]);
+  }, [connected]);
 
   useEffect(() => {
     setForecast(null);
@@ -65,7 +65,7 @@ export function PoolPage() {
       // Late responses from this connection must not land on a later one.
       requestRef.current += 1;
     };
-  }, [load]);
+  }, [load, apiBase]);
 
   useEffect(() => {
     if (!connected) return;
