@@ -1,0 +1,216 @@
+@use '../../../styles/mixins' as *;
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+}
+
+.title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 650;
+  color: var(--text-primary);
+}
+
+.table {
+  td {
+    vertical-align: middle;
+  }
+
+  /* Phone width: each account becomes a card of labelled rows. */
+  @include mobile {
+    thead {
+      display: none;
+    }
+
+    tr,
+    td {
+      display: block;
+    }
+
+    tr {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    tbody tr:last-child {
+      border-bottom: none;
+    }
+
+    td {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 4px 0;
+      border-bottom: none;
+      text-align: right;
+    }
+
+    td[data-label]::before {
+      content: attr(data-label);
+      flex: none;
+      font-size: 12px;
+      color: var(--text-tertiary);
+      text-align: left;
+    }
+  }
+}
+
+.email {
+  font-weight: 600;
+  word-break: break-all;
+
+  @include mobile {
+    padding-bottom: 6px;
+    text-align: left;
+  }
+}
+
+.usage {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 150px;
+
+  @include mobile {
+    min-width: 0;
+    width: 60%;
+  }
+}
+
+.track {
+  position: relative;
+  flex: 1;
+  height: 8px;
+  border-radius: 4px;
+  background: var(--bg-tertiary);
+}
+
+.fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  border-radius: 4px;
+  background: var(--text-secondary);
+
+  &[data-level='high'] {
+    background: var(--amber-color);
+  }
+
+  &[data-level='full'] {
+    background: var(--error-color);
+  }
+}
+
+/* The routing threshold: an account above it is used only inside its drain window. */
+.threshold {
+  position: absolute;
+  top: -3px;
+  bottom: -3px;
+  width: 2px;
+  margin-left: -1px;
+  border-radius: 1px;
+  background: var(--text-primary);
+  box-shadow: 0 0 0 1px var(--bg-primary);
+}
+
+.value {
+  min-width: 3.2em;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.stack {
+  display: inline-flex;
+  flex-direction: column;
+  line-height: 1.35;
+
+  @include mobile {
+    align-items: flex-end;
+  }
+}
+
+.muted {
+  font-size: 12px;
+  color: var(--text-tertiary);
+}
+
+.leftAtReset {
+  font-variant-numeric: tabular-nums;
+  text-decoration: underline dotted var(--text-tertiary);
+  text-underline-offset: 3px;
+  cursor: help;
+  outline: none;
+
+  &:focus-visible {
+    box-shadow: 0 0 0 2px var(--primary-30);
+    border-radius: 2px;
+  }
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+
+  &[data-state='next'] {
+    color: var(--success-badge-text);
+    background: var(--success-badge-bg);
+    border-color: var(--success-badge-border);
+  }
+
+  &[data-state='eligible'] {
+    color: var(--text-primary);
+    background: var(--bg-primary);
+  }
+
+  &[data-state='draining'],
+  &[data-state='at-limit'] {
+    color: var(--amber-text);
+    background: var(--amber-10);
+    border-color: var(--amber-30);
+  }
+
+  &[data-state='needs-sign-in'] {
+    color: var(--failure-badge-text);
+    background: var(--failure-badge-bg);
+    border-color: var(--failure-badge-border);
+  }
+
+  &[data-state='no-data'],
+  &[data-state='disabled'],
+  &[data-state='unknown'] {
+    color: var(--text-tertiary);
+  }
+}
+
+.observed {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  color: var(--text-secondary);
+
+  &[data-stale='true'] {
+    color: var(--warning-text);
+  }
+}
+
+.staleTag {
+  padding: 1px 6px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--warning-text);
+  background: var(--warning-bg);
+  border: 1px solid var(--warning-border);
+}
