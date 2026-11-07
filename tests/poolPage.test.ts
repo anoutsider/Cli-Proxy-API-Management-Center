@@ -51,7 +51,7 @@ describe('Pool page verdict', () => {
   test.each([
     [
       'normal',
-      'Runs out in 132 hours on a busy day, and not within 7 days on a quiet day. ' +
+      'Runs out in 105 hours on a busy day, and not within 7 days on a quiet day. ' +
         'Next reset in 8 hours: ana@example.com, +76%.',
     ],
     ['short history', 'Not enough history yet: the forecast needs 3 full days.'],
@@ -73,7 +73,7 @@ describe('Pool page verdict', () => {
       },
     };
     expect(verdictOf(render(ranged))).toBe(
-      'Runs out in 132 to 155 hours. Next reset in 8 hours: ana@example.com, +76%.'
+      'Runs out in 105 to 155 hours. Next reset in 8 hours: ana@example.com, +76%.'
     );
   });
 });

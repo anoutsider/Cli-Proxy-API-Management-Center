@@ -99,8 +99,8 @@
     "fableRemaining": 1.8,
     "burnPerDay": {
       "quiet": 0.2908,
-      "typical": 0.5547,
-      "busy": 1.0505,
+      "typical": 0.5552,
+      "busy": 1.0512,
       "last24h": 1.146
     },
     "runsOutAt": {
@@ -1678,11 +1678,11 @@
       },
       {
         "at": "2026-11-08T08:00:00Z",
-        "remaining": 0.9538
+        "remaining": 0.9537
       },
       {
         "at": "2026-11-08T09:00:00Z",
-        "remaining": 0.9307
+        "remaining": 0.9306
       },
       {
         "at": "2026-11-08T10:00:00Z",
@@ -1690,619 +1690,619 @@
       },
       {
         "at": "2026-11-08T11:00:00Z",
-        "remaining": 0.8844
+        "remaining": 0.8843
       },
       {
         "at": "2026-11-08T12:00:00Z",
-        "remaining": 0.8613
+        "remaining": 0.8612
       },
       {
         "at": "2026-11-08T13:00:00Z",
-        "remaining": 0.8382
+        "remaining": 0.8381
       },
       {
         "at": "2026-11-08T14:00:00Z",
-        "remaining": 0.8151
+        "remaining": 0.8149
       },
       {
         "at": "2026-11-08T15:00:00Z",
-        "remaining": 1.792
+        "remaining": 1.7918
       },
       {
         "at": "2026-11-08T16:00:00Z",
-        "remaining": 1.7689
+        "remaining": 1.7687
       },
       {
         "at": "2026-11-08T17:00:00Z",
-        "remaining": 1.7458
+        "remaining": 1.7455
       },
       {
         "at": "2026-11-08T18:00:00Z",
-        "remaining": 1.7226
+        "remaining": 1.7224
       },
       {
         "at": "2026-11-08T19:00:00Z",
-        "remaining": 1.6995
+        "remaining": 1.6992
       },
       {
         "at": "2026-11-08T20:00:00Z",
-        "remaining": 1.6764
+        "remaining": 1.6761
       },
       {
         "at": "2026-11-08T21:00:00Z",
-        "remaining": 1.6533
+        "remaining": 1.653
       },
       {
         "at": "2026-11-08T22:00:00Z",
-        "remaining": 1.6302
+        "remaining": 1.6298
       },
       {
         "at": "2026-11-08T23:00:00Z",
-        "remaining": 1.6071
+        "remaining": 1.6067
       },
       {
         "at": "2026-11-09T00:00:00Z",
-        "remaining": 1.584
+        "remaining": 1.5836
       },
       {
         "at": "2026-11-09T01:00:00Z",
-        "remaining": 1.5609
+        "remaining": 1.5604
       },
       {
         "at": "2026-11-09T02:00:00Z",
-        "remaining": 1.5377
+        "remaining": 1.5373
       },
       {
         "at": "2026-11-09T03:00:00Z",
-        "remaining": 1.5146
+        "remaining": 1.5142
       },
       {
         "at": "2026-11-09T04:00:00Z",
-        "remaining": 1.4915
+        "remaining": 1.491
       },
       {
         "at": "2026-11-09T05:00:00Z",
-        "remaining": 1.4684
+        "remaining": 1.4679
       },
       {
         "at": "2026-11-09T06:00:00Z",
-        "remaining": 1.4453
+        "remaining": 1.4448
       },
       {
         "at": "2026-11-09T07:00:00Z",
-        "remaining": 1.4222
+        "remaining": 1.4216
       },
       {
         "at": "2026-11-09T08:00:00Z",
-        "remaining": 1.3991
+        "remaining": 1.3985
       },
       {
         "at": "2026-11-09T09:00:00Z",
-        "remaining": 1.3759
+        "remaining": 1.3754
       },
       {
         "at": "2026-11-09T10:00:00Z",
-        "remaining": 1.3528
+        "remaining": 1.3522
       },
       {
         "at": "2026-11-09T11:00:00Z",
-        "remaining": 1.3297
+        "remaining": 1.3291
       },
       {
         "at": "2026-11-09T12:00:00Z",
-        "remaining": 1.3066
+        "remaining": 1.306
       },
       {
         "at": "2026-11-09T13:00:00Z",
-        "remaining": 1.2835
+        "remaining": 1.2828
       },
       {
         "at": "2026-11-09T14:00:00Z",
-        "remaining": 1.2604
+        "remaining": 1.2597
       },
       {
         "at": "2026-11-09T15:00:00Z",
-        "remaining": 1.2373
+        "remaining": 1.2365
       },
       {
         "at": "2026-11-09T16:00:00Z",
-        "remaining": 1.2142
+        "remaining": 1.2134
       },
       {
         "at": "2026-11-09T17:00:00Z",
-        "remaining": 1.191
+        "remaining": 1.1903
       },
       {
         "at": "2026-11-09T18:00:00Z",
-        "remaining": 1.1679
+        "remaining": 1.1671
       },
       {
         "at": "2026-11-09T19:00:00Z",
-        "remaining": 1.1448
+        "remaining": 1.144
       },
       {
         "at": "2026-11-09T20:00:00Z",
-        "remaining": 1.1217
+        "remaining": 1.1209
       },
       {
         "at": "2026-11-09T21:00:00Z",
-        "remaining": 1.0986
+        "remaining": 1.0977
       },
       {
         "at": "2026-11-09T22:00:00Z",
-        "remaining": 1.0755
+        "remaining": 1.0746
       },
       {
         "at": "2026-11-09T23:00:00Z",
-        "remaining": 1.0524
+        "remaining": 1.0515
       },
       {
         "at": "2026-11-10T00:00:00Z",
-        "remaining": 1.0293
+        "remaining": 1.0283
       },
       {
         "at": "2026-11-10T01:00:00Z",
-        "remaining": 1.0061
+        "remaining": 1.0052
       },
       {
         "at": "2026-11-10T02:00:00Z",
-        "remaining": 0.983
+        "remaining": 0.9821
       },
       {
         "at": "2026-11-10T03:00:00Z",
-        "remaining": 0.9599
+        "remaining": 0.9589
       },
       {
         "at": "2026-11-10T04:00:00Z",
-        "remaining": 0.9368
+        "remaining": 0.9358
       },
       {
         "at": "2026-11-10T05:00:00Z",
-        "remaining": 0.9137
+        "remaining": 0.9127
       },
       {
         "at": "2026-11-10T06:00:00Z",
-        "remaining": 0.8906
+        "remaining": 0.8895
       },
       {
         "at": "2026-11-10T07:00:00Z",
-        "remaining": 0.8675
+        "remaining": 0.8664
       },
       {
         "at": "2026-11-10T08:00:00Z",
-        "remaining": 0.8443
+        "remaining": 0.8433
       },
       {
         "at": "2026-11-10T09:00:00Z",
-        "remaining": 0.8212
+        "remaining": 0.8201
       },
       {
         "at": "2026-11-10T10:00:00Z",
-        "remaining": 0.7981
+        "remaining": 0.797
       },
       {
         "at": "2026-11-10T11:00:00Z",
-        "remaining": 0.775
+        "remaining": 0.7739
       },
       {
         "at": "2026-11-10T12:00:00Z",
-        "remaining": 0.7519
+        "remaining": 0.7507
       },
       {
         "at": "2026-11-10T13:00:00Z",
-        "remaining": 0.7288
+        "remaining": 0.7276
       },
       {
         "at": "2026-11-10T14:00:00Z",
-        "remaining": 0.7057
+        "remaining": 0.7044
       },
       {
         "at": "2026-11-10T15:00:00Z",
-        "remaining": 0.6826
+        "remaining": 0.6813
       },
       {
         "at": "2026-11-10T16:00:00Z",
-        "remaining": 0.6594
+        "remaining": 0.6582
       },
       {
         "at": "2026-11-10T17:00:00Z",
-        "remaining": 0.6363
+        "remaining": 0.635
       },
       {
         "at": "2026-11-10T18:00:00Z",
-        "remaining": 0.6132
+        "remaining": 0.6119
       },
       {
         "at": "2026-11-10T19:00:00Z",
-        "remaining": 0.5901
+        "remaining": 0.5888
       },
       {
         "at": "2026-11-10T20:00:00Z",
-        "remaining": 0.567
+        "remaining": 0.5656
       },
       {
         "at": "2026-11-10T21:00:00Z",
-        "remaining": 0.5439
+        "remaining": 0.5425
       },
       {
         "at": "2026-11-10T22:00:00Z",
-        "remaining": 0.5208
+        "remaining": 0.5194
       },
       {
         "at": "2026-11-10T23:00:00Z",
-        "remaining": 0.4977
+        "remaining": 0.4962
       },
       {
         "at": "2026-11-11T00:00:00Z",
-        "remaining": 0.4745
+        "remaining": 0.4731
       },
       {
         "at": "2026-11-11T01:00:00Z",
-        "remaining": 1.4514
+        "remaining": 1.45
       },
       {
         "at": "2026-11-11T02:00:00Z",
-        "remaining": 1.4283
+        "remaining": 1.4268
       },
       {
         "at": "2026-11-11T03:00:00Z",
-        "remaining": 1.4052
+        "remaining": 1.4037
       },
       {
         "at": "2026-11-11T04:00:00Z",
-        "remaining": 1.3821
+        "remaining": 1.3806
       },
       {
         "at": "2026-11-11T05:00:00Z",
-        "remaining": 1.359
+        "remaining": 1.3574
       },
       {
         "at": "2026-11-11T06:00:00Z",
-        "remaining": 1.3359
+        "remaining": 1.3343
       },
       {
         "at": "2026-11-11T07:00:00Z",
-        "remaining": 1.3127
+        "remaining": 1.3112
       },
       {
         "at": "2026-11-11T08:00:00Z",
-        "remaining": 1.2896
+        "remaining": 1.288
       },
       {
         "at": "2026-11-11T09:00:00Z",
-        "remaining": 1.2665
+        "remaining": 1.2649
       },
       {
         "at": "2026-11-11T10:00:00Z",
-        "remaining": 1.2434
+        "remaining": 1.2417
       },
       {
         "at": "2026-11-11T11:00:00Z",
-        "remaining": 1.2203
+        "remaining": 1.2186
       },
       {
         "at": "2026-11-11T12:00:00Z",
-        "remaining": 1.1972
+        "remaining": 1.1955
       },
       {
         "at": "2026-11-11T13:00:00Z",
-        "remaining": 1.1741
+        "remaining": 1.1723
       },
       {
         "at": "2026-11-11T14:00:00Z",
-        "remaining": 1.151
+        "remaining": 1.1492
       },
       {
         "at": "2026-11-11T15:00:00Z",
-        "remaining": 1.1278
+        "remaining": 1.1261
       },
       {
         "at": "2026-11-11T16:00:00Z",
-        "remaining": 1.1047
+        "remaining": 1.1029
       },
       {
         "at": "2026-11-11T17:00:00Z",
-        "remaining": 1.0816
+        "remaining": 1.0798
       },
       {
         "at": "2026-11-11T18:00:00Z",
-        "remaining": 1.0585
+        "remaining": 1.0567
       },
       {
         "at": "2026-11-11T19:00:00Z",
-        "remaining": 1.0354
+        "remaining": 1.0335
       },
       {
         "at": "2026-11-11T20:00:00Z",
-        "remaining": 1.0123
+        "remaining": 1.0104
       },
       {
         "at": "2026-11-11T21:00:00Z",
-        "remaining": 0.9892
+        "remaining": 0.9873
       },
       {
         "at": "2026-11-11T22:00:00Z",
-        "remaining": 0.9661
+        "remaining": 0.9641
       },
       {
         "at": "2026-11-11T23:00:00Z",
-        "remaining": 0.9429
+        "remaining": 0.941
       },
       {
         "at": "2026-11-12T00:00:00Z",
-        "remaining": 0.9198
+        "remaining": 0.9179
       },
       {
         "at": "2026-11-12T01:00:00Z",
-        "remaining": 0.8967
+        "remaining": 0.8947
       },
       {
         "at": "2026-11-12T02:00:00Z",
-        "remaining": 0.8736
+        "remaining": 0.8716
       },
       {
         "at": "2026-11-12T03:00:00Z",
-        "remaining": 0.8505
+        "remaining": 0.8485
       },
       {
         "at": "2026-11-12T04:00:00Z",
-        "remaining": 0.8274
+        "remaining": 0.8253
       },
       {
         "at": "2026-11-12T05:00:00Z",
-        "remaining": 0.8043
+        "remaining": 0.8022
       },
       {
         "at": "2026-11-12T06:00:00Z",
-        "remaining": 0.7811
+        "remaining": 0.7791
       },
       {
         "at": "2026-11-12T07:00:00Z",
-        "remaining": 1.758
+        "remaining": 1.7559
       },
       {
         "at": "2026-11-12T08:00:00Z",
-        "remaining": 1.7349
+        "remaining": 1.7328
       },
       {
         "at": "2026-11-12T09:00:00Z",
-        "remaining": 1.7118
+        "remaining": 1.7096
       },
       {
         "at": "2026-11-12T10:00:00Z",
-        "remaining": 1.6887
+        "remaining": 1.6865
       },
       {
         "at": "2026-11-12T11:00:00Z",
-        "remaining": 1.6656
+        "remaining": 1.6634
       },
       {
         "at": "2026-11-12T12:00:00Z",
-        "remaining": 1.6425
+        "remaining": 1.6402
       },
       {
         "at": "2026-11-12T13:00:00Z",
-        "remaining": 1.6194
+        "remaining": 1.6171
       },
       {
         "at": "2026-11-12T14:00:00Z",
-        "remaining": 1.5962
+        "remaining": 1.594
       },
       {
         "at": "2026-11-12T15:00:00Z",
-        "remaining": 1.5731
+        "remaining": 1.5708
       },
       {
         "at": "2026-11-12T16:00:00Z",
-        "remaining": 1.55
+        "remaining": 1.5477
       },
       {
         "at": "2026-11-12T17:00:00Z",
-        "remaining": 1.5269
+        "remaining": 1.5246
       },
       {
         "at": "2026-11-12T18:00:00Z",
-        "remaining": 1.5038
+        "remaining": 1.5014
       },
       {
         "at": "2026-11-12T19:00:00Z",
-        "remaining": 1.4807
+        "remaining": 1.4783
       },
       {
         "at": "2026-11-12T20:00:00Z",
-        "remaining": 1.4576
+        "remaining": 1.4552
       },
       {
         "at": "2026-11-12T21:00:00Z",
-        "remaining": 1.4345
+        "remaining": 1.432
       },
       {
         "at": "2026-11-12T22:00:00Z",
-        "remaining": 1.4113
+        "remaining": 1.4089
       },
       {
         "at": "2026-11-12T23:00:00Z",
-        "remaining": 1.3882
+        "remaining": 1.3858
       },
       {
         "at": "2026-11-13T00:00:00Z",
-        "remaining": 1.3651
+        "remaining": 1.3626
       },
       {
         "at": "2026-11-13T01:00:00Z",
-        "remaining": 1.342
+        "remaining": 1.3395
       },
       {
         "at": "2026-11-13T02:00:00Z",
-        "remaining": 1.3189
+        "remaining": 1.3164
       },
       {
         "at": "2026-11-13T03:00:00Z",
-        "remaining": 1.2958
+        "remaining": 1.2932
       },
       {
         "at": "2026-11-13T04:00:00Z",
-        "remaining": 1.2727
+        "remaining": 1.2701
       },
       {
         "at": "2026-11-13T05:00:00Z",
-        "remaining": 1.2495
+        "remaining": 1.247
       },
       {
         "at": "2026-11-13T06:00:00Z",
-        "remaining": 1.2264
+        "remaining": 1.2238
       },
       {
         "at": "2026-11-13T07:00:00Z",
-        "remaining": 1.2033
+        "remaining": 1.2007
       },
       {
         "at": "2026-11-13T08:00:00Z",
-        "remaining": 1.1802
+        "remaining": 1.1775
       },
       {
         "at": "2026-11-13T09:00:00Z",
-        "remaining": 1.1571
+        "remaining": 1.1544
       },
       {
         "at": "2026-11-13T10:00:00Z",
-        "remaining": 1.134
+        "remaining": 1.1313
       },
       {
         "at": "2026-11-13T11:00:00Z",
-        "remaining": 1.1109
+        "remaining": 1.1081
       },
       {
         "at": "2026-11-13T12:00:00Z",
-        "remaining": 1.0878
+        "remaining": 1.085
       },
       {
         "at": "2026-11-13T13:00:00Z",
-        "remaining": 1.0646
+        "remaining": 1.0619
       },
       {
         "at": "2026-11-13T14:00:00Z",
-        "remaining": 1.0415
+        "remaining": 1.0387
       },
       {
         "at": "2026-11-13T15:00:00Z",
-        "remaining": 1.0184
+        "remaining": 1.0156
       },
       {
         "at": "2026-11-13T16:00:00Z",
-        "remaining": 0.9953
+        "remaining": 0.9925
       },
       {
         "at": "2026-11-13T17:00:00Z",
-        "remaining": 0.9722
+        "remaining": 0.9693
       },
       {
         "at": "2026-11-13T18:00:00Z",
-        "remaining": 0.9491
+        "remaining": 0.9462
       },
       {
         "at": "2026-11-13T19:00:00Z",
-        "remaining": 0.926
+        "remaining": 0.9231
       },
       {
         "at": "2026-11-13T20:00:00Z",
-        "remaining": 0.9028
+        "remaining": 0.8999
       },
       {
         "at": "2026-11-13T21:00:00Z",
-        "remaining": 0.8797
+        "remaining": 0.8768
       },
       {
         "at": "2026-11-13T22:00:00Z",
-        "remaining": 0.8566
+        "remaining": 0.8537
       },
       {
         "at": "2026-11-13T23:00:00Z",
-        "remaining": 0.8335
+        "remaining": 0.8305
       },
       {
         "at": "2026-11-14T00:00:00Z",
-        "remaining": 0.8104
+        "remaining": 0.8074
       },
       {
         "at": "2026-11-14T01:00:00Z",
-        "remaining": 0.7873
+        "remaining": 0.7843
       },
       {
         "at": "2026-11-14T02:00:00Z",
-        "remaining": 0.7642
+        "remaining": 0.7611
       },
       {
         "at": "2026-11-14T03:00:00Z",
-        "remaining": 0.7411
+        "remaining": 0.738
       },
       {
         "at": "2026-11-14T04:00:00Z",
-        "remaining": 0.7179
+        "remaining": 0.7148
       },
       {
         "at": "2026-11-14T05:00:00Z",
-        "remaining": 0.6948
+        "remaining": 0.6917
       },
       {
         "at": "2026-11-14T06:00:00Z",
-        "remaining": 0.6717
+        "remaining": 0.6686
       },
       {
         "at": "2026-11-14T07:00:00Z",
-        "remaining": 0.6486
+        "remaining": 0.6454
       },
       {
         "at": "2026-11-14T08:00:00Z",
-        "remaining": 0.6255
+        "remaining": 0.6223
       },
       {
         "at": "2026-11-14T09:00:00Z",
-        "remaining": 0.6024
+        "remaining": 0.5992
       },
       {
         "at": "2026-11-14T10:00:00Z",
-        "remaining": 0.5793
+        "remaining": 0.576
       },
       {
         "at": "2026-11-14T11:00:00Z",
-        "remaining": 0.5562
+        "remaining": 0.5529
       },
       {
         "at": "2026-11-14T12:00:00Z",
-        "remaining": 0.533
+        "remaining": 0.5298
       },
       {
         "at": "2026-11-14T13:00:00Z",
-        "remaining": 0.5099
+        "remaining": 0.5066
       },
       {
         "at": "2026-11-14T14:00:00Z",
-        "remaining": 0.4868
+        "remaining": 0.4835
       },
       {
         "at": "2026-11-14T15:00:00Z",
-        "remaining": 0.4637
+        "remaining": 0.4604
       },
       {
         "at": "2026-11-14T16:00:00Z",
-        "remaining": 0.4406
+        "remaining": 0.4372
       },
       {
         "at": "2026-11-14T17:00:00Z",
-        "remaining": 0.4175
+        "remaining": 0.4141
       },
       {
         "at": "2026-11-14T18:00:00Z",
-        "remaining": 0.3944
+        "remaining": 0.391
       },
       {
         "at": "2026-11-14T19:00:00Z",
-        "remaining": 0.3712
+        "remaining": 0.3678
       },
       {
         "at": "2026-11-14T20:00:00Z",
-        "remaining": 0.3481
+        "remaining": 0.3447
       }
     ],
     "busy": [
@@ -2352,179 +2352,179 @@
       },
       {
         "at": "2026-11-08T08:00:00Z",
-        "remaining": 0.9125
+        "remaining": 0.9124
       },
       {
         "at": "2026-11-08T09:00:00Z",
-        "remaining": 0.8687
+        "remaining": 0.8686
       },
       {
         "at": "2026-11-08T10:00:00Z",
-        "remaining": 0.8249
+        "remaining": 0.8248
       },
       {
         "at": "2026-11-08T11:00:00Z",
-        "remaining": 0.7811
+        "remaining": 0.781
       },
       {
         "at": "2026-11-08T12:00:00Z",
-        "remaining": 0.7374
+        "remaining": 0.7372
       },
       {
         "at": "2026-11-08T13:00:00Z",
-        "remaining": 0.6936
+        "remaining": 0.6934
       },
       {
         "at": "2026-11-08T14:00:00Z",
-        "remaining": 0.6498
+        "remaining": 0.6496
       },
       {
         "at": "2026-11-08T15:00:00Z",
-        "remaining": 1.6061
+        "remaining": 1.6058
       },
       {
         "at": "2026-11-08T16:00:00Z",
-        "remaining": 1.5623
+        "remaining": 1.562
       },
       {
         "at": "2026-11-08T17:00:00Z",
-        "remaining": 1.5185
+        "remaining": 1.5182
       },
       {
         "at": "2026-11-08T18:00:00Z",
-        "remaining": 1.4747
+        "remaining": 1.4744
       },
       {
         "at": "2026-11-08T19:00:00Z",
-        "remaining": 1.431
+        "remaining": 1.4306
       },
       {
         "at": "2026-11-08T20:00:00Z",
-        "remaining": 1.3872
+        "remaining": 1.3868
       },
       {
         "at": "2026-11-08T21:00:00Z",
-        "remaining": 1.3434
+        "remaining": 1.343
       },
       {
         "at": "2026-11-08T22:00:00Z",
-        "remaining": 1.2997
+        "remaining": 1.2992
       },
       {
         "at": "2026-11-08T23:00:00Z",
-        "remaining": 1.2559
+        "remaining": 1.2554
       },
       {
         "at": "2026-11-09T00:00:00Z",
-        "remaining": 1.2121
+        "remaining": 1.2116
       },
       {
         "at": "2026-11-09T01:00:00Z",
-        "remaining": 1.1683
+        "remaining": 1.1678
       },
       {
         "at": "2026-11-09T02:00:00Z",
-        "remaining": 1.1246
+        "remaining": 1.124
       },
       {
         "at": "2026-11-09T03:00:00Z",
-        "remaining": 1.0808
+        "remaining": 1.0802
       },
       {
         "at": "2026-11-09T04:00:00Z",
-        "remaining": 1.037
+        "remaining": 1.0364
       },
       {
         "at": "2026-11-09T05:00:00Z",
-        "remaining": 0.9933
+        "remaining": 0.9926
       },
       {
         "at": "2026-11-09T06:00:00Z",
-        "remaining": 0.9495
+        "remaining": 0.9488
       },
       {
         "at": "2026-11-09T07:00:00Z",
-        "remaining": 0.9057
+        "remaining": 0.905
       },
       {
         "at": "2026-11-09T08:00:00Z",
-        "remaining": 0.8619
+        "remaining": 0.8612
       },
       {
         "at": "2026-11-09T09:00:00Z",
-        "remaining": 0.8182
+        "remaining": 0.8174
       },
       {
         "at": "2026-11-09T10:00:00Z",
-        "remaining": 0.7744
+        "remaining": 0.7736
       },
       {
         "at": "2026-11-09T11:00:00Z",
-        "remaining": 0.7306
+        "remaining": 0.7298
       },
       {
         "at": "2026-11-09T12:00:00Z",
-        "remaining": 0.6868
+        "remaining": 0.686
       },
       {
         "at": "2026-11-09T13:00:00Z",
-        "remaining": 0.6431
+        "remaining": 0.6422
       },
       {
         "at": "2026-11-09T14:00:00Z",
-        "remaining": 0.5993
+        "remaining": 0.5984
       },
       {
         "at": "2026-11-09T15:00:00Z",
-        "remaining": 0.5555
+        "remaining": 0.5546
       },
       {
         "at": "2026-11-09T16:00:00Z",
-        "remaining": 0.5118
+        "remaining": 0.5108
       },
       {
         "at": "2026-11-09T17:00:00Z",
-        "remaining": 0.468
+        "remaining": 0.467
       },
       {
         "at": "2026-11-09T18:00:00Z",
-        "remaining": 0.4242
+        "remaining": 0.4232
       },
       {
         "at": "2026-11-09T19:00:00Z",
-        "remaining": 0.3804
+        "remaining": 0.3794
       },
       {
         "at": "2026-11-09T20:00:00Z",
-        "remaining": 0.3367
+        "remaining": 0.3356
       },
       {
         "at": "2026-11-09T21:00:00Z",
-        "remaining": 0.2929
+        "remaining": 0.2918
       },
       {
         "at": "2026-11-09T22:00:00Z",
-        "remaining": 0.2491
+        "remaining": 0.248
       },
       {
         "at": "2026-11-09T23:00:00Z",
-        "remaining": 0.2054
+        "remaining": 0.2042
       },
       {
         "at": "2026-11-10T00:00:00Z",
-        "remaining": 0.1616
+        "remaining": 0.1604
       },
       {
         "at": "2026-11-10T01:00:00Z",
-        "remaining": 0.1178
+        "remaining": 0.1166
       },
       {
         "at": "2026-11-10T02:00:00Z",
-        "remaining": 0.074
+        "remaining": 0.0728
       },
       {
         "at": "2026-11-10T03:00:00Z",
-        "remaining": 0.0303
+        "remaining": 0.029
       },
       {
         "at": "2026-11-10T04:00:00Z",
@@ -2620,87 +2620,87 @@
       },
       {
         "at": "2026-11-11T03:00:00Z",
-        "remaining": 0.9125
+        "remaining": 0.9124
       },
       {
         "at": "2026-11-11T04:00:00Z",
-        "remaining": 0.8687
+        "remaining": 0.8686
       },
       {
         "at": "2026-11-11T05:00:00Z",
-        "remaining": 0.8249
+        "remaining": 0.8248
       },
       {
         "at": "2026-11-11T06:00:00Z",
-        "remaining": 0.7811
+        "remaining": 0.781
       },
       {
         "at": "2026-11-11T07:00:00Z",
-        "remaining": 0.7374
+        "remaining": 0.7372
       },
       {
         "at": "2026-11-11T08:00:00Z",
-        "remaining": 0.6936
+        "remaining": 0.6934
       },
       {
         "at": "2026-11-11T09:00:00Z",
-        "remaining": 0.6498
+        "remaining": 0.6496
       },
       {
         "at": "2026-11-11T10:00:00Z",
-        "remaining": 0.6061
+        "remaining": 0.6058
       },
       {
         "at": "2026-11-11T11:00:00Z",
-        "remaining": 0.5623
+        "remaining": 0.562
       },
       {
         "at": "2026-11-11T12:00:00Z",
-        "remaining": 0.5185
+        "remaining": 0.5182
       },
       {
         "at": "2026-11-11T13:00:00Z",
-        "remaining": 0.4747
+        "remaining": 0.4744
       },
       {
         "at": "2026-11-11T14:00:00Z",
-        "remaining": 0.431
+        "remaining": 0.4306
       },
       {
         "at": "2026-11-11T15:00:00Z",
-        "remaining": 0.3872
+        "remaining": 0.3868
       },
       {
         "at": "2026-11-11T16:00:00Z",
-        "remaining": 0.3434
+        "remaining": 0.343
       },
       {
         "at": "2026-11-11T17:00:00Z",
-        "remaining": 0.2997
+        "remaining": 0.2992
       },
       {
         "at": "2026-11-11T18:00:00Z",
-        "remaining": 0.2559
+        "remaining": 0.2554
       },
       {
         "at": "2026-11-11T19:00:00Z",
-        "remaining": 0.2121
+        "remaining": 0.2116
       },
       {
         "at": "2026-11-11T20:00:00Z",
-        "remaining": 0.1683
+        "remaining": 0.1678
       },
       {
         "at": "2026-11-11T21:00:00Z",
-        "remaining": 0.1246
+        "remaining": 0.124
       },
       {
         "at": "2026-11-11T22:00:00Z",
-        "remaining": 0.0808
+        "remaining": 0.0802
       },
       {
         "at": "2026-11-11T23:00:00Z",
-        "remaining": 0.037
+        "remaining": 0.0364
       },
       {
         "at": "2026-11-12T00:00:00Z",
@@ -2740,87 +2740,87 @@
       },
       {
         "at": "2026-11-12T09:00:00Z",
-        "remaining": 0.9125
+        "remaining": 0.9124
       },
       {
         "at": "2026-11-12T10:00:00Z",
-        "remaining": 0.8687
+        "remaining": 0.8686
       },
       {
         "at": "2026-11-12T11:00:00Z",
-        "remaining": 0.8249
+        "remaining": 0.8248
       },
       {
         "at": "2026-11-12T12:00:00Z",
-        "remaining": 0.7811
+        "remaining": 0.781
       },
       {
         "at": "2026-11-12T13:00:00Z",
-        "remaining": 0.7374
+        "remaining": 0.7372
       },
       {
         "at": "2026-11-12T14:00:00Z",
-        "remaining": 0.6936
+        "remaining": 0.6934
       },
       {
         "at": "2026-11-12T15:00:00Z",
-        "remaining": 0.6498
+        "remaining": 0.6496
       },
       {
         "at": "2026-11-12T16:00:00Z",
-        "remaining": 0.6061
+        "remaining": 0.6058
       },
       {
         "at": "2026-11-12T17:00:00Z",
-        "remaining": 0.5623
+        "remaining": 0.562
       },
       {
         "at": "2026-11-12T18:00:00Z",
-        "remaining": 0.5185
+        "remaining": 0.5182
       },
       {
         "at": "2026-11-12T19:00:00Z",
-        "remaining": 0.4747
+        "remaining": 0.4744
       },
       {
         "at": "2026-11-12T20:00:00Z",
-        "remaining": 0.431
+        "remaining": 0.4306
       },
       {
         "at": "2026-11-12T21:00:00Z",
-        "remaining": 0.3872
+        "remaining": 0.3868
       },
       {
         "at": "2026-11-12T22:00:00Z",
-        "remaining": 0.3434
+        "remaining": 0.343
       },
       {
         "at": "2026-11-12T23:00:00Z",
-        "remaining": 0.2997
+        "remaining": 0.2992
       },
       {
         "at": "2026-11-13T00:00:00Z",
-        "remaining": 0.2559
+        "remaining": 0.2554
       },
       {
         "at": "2026-11-13T01:00:00Z",
-        "remaining": 0.2121
+        "remaining": 0.2116
       },
       {
         "at": "2026-11-13T02:00:00Z",
-        "remaining": 0.1683
+        "remaining": 0.1678
       },
       {
         "at": "2026-11-13T03:00:00Z",
-        "remaining": 0.1246
+        "remaining": 0.124
       },
       {
         "at": "2026-11-13T04:00:00Z",
-        "remaining": 0.0808
+        "remaining": 0.0802
       },
       {
         "at": "2026-11-13T05:00:00Z",
-        "remaining": 0.037
+        "remaining": 0.0364
       },
       {
         "at": "2026-11-13T06:00:00Z",
@@ -2982,7 +2982,7 @@
   },
   "accuracy": {
     "forecastAt": "2026-11-06T00:00:00Z",
-    "predictedTypical": 0.5547,
+    "predictedTypical": 0.5552,
     "actual": 0.8853
   },
   "alerts": [
